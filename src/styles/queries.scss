@@ -1,0 +1,25 @@
+@media screen and (max-width: 1111px) {
+  /* Element | http://localhost:8000/ */
+
+  /* 6a2d8099-1a39-9e4e-ab3e-22e702ca350d | blob:http://localhost:8000/6a2d8099-1a39-9e4e-ab3e-22e702ca350d */
+
+  .SubHero {
+    /* max-width: 50%; */
+    /* padding: 120px 110px; */
+    max-width: 90%;
+    padding: 90px 20px;
+    text-align: center;
+  }
+
+  body .anchorDiv {
+    /* flex-direction: row; */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .nav_links > li.home {
+    display: none;
+  }
+}

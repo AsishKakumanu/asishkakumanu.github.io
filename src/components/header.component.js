@@ -12,17 +12,17 @@ export default class header extends React.Component {
 
         <nav>
           <ul className="nav_links">
-            <li>
+            <li className="home">
               <Link to="/" className="hover">
                 Home
               </Link>
             </li>
-            <li>
+            <li className="projects">
               <Link to="/page-2/" className="hover">
                 Projects
               </Link>
             </li>
-            <li>
+            <li className="contact">
               <Link to="/page-3/" className="hover">
                 Contact 🚧
               </Link>

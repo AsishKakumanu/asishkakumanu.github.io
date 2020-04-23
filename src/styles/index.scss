@@ -1,9 +1,15 @@
 @import "./declare.scss";
+@import "./queries.scss";
 
 body {
   //padding: 5px;
   font-size: 25px;
   line-height: 1.4;
+
+  .anchorDiv {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 a {

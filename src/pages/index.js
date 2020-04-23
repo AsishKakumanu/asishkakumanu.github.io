@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import AnchorTag from "../components/anchor.component"
-import HeaderTag from "../components/header.component"
-import ComponentDarkMode from "../components/componentDarkMode"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import AnchorTag from "../components/anchor.component";
+import HeaderTag from "../components/header.component";
+import ComponentDarkMode from "../components/componentDarkMode";
 
 // import Image from "../components/image"
 
-import equalizer from "../images/equalizer-crop.gif"
+import equalizer from "../images/equalizer-crop.gif";
 
 export const lastfmTrack = graphql`
   {
@@ -21,7 +21,7 @@ export const lastfmTrack = graphql`
       }
     }
   }
-`
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -39,21 +39,23 @@ const IndexPage = ({ data }) => (
           & <span className="underline font300">Front-End Developer</span> based
           in Sunnyvale, California.
         </p>
+        <div className="anchorDiv">
+          <AnchorTag
+            options={{
+              username: "KakumanuAsish",
+              class: "twitter",
+              href: "https://twitter.com/kakumanuasish",
+            }}
+          ></AnchorTag>
+          <AnchorTag
+            options={{
+              username: "asishkakumanu",
+              class: "linkedin",
+              href: "https://www.linkedin.com/in/asishkakumanu/",
+            }}
+          ></AnchorTag>
+        </div>
 
-        <AnchorTag
-          options={{
-            username: "KakumanuAsish",
-            class: "twitter",
-            href: "https://twitter.com/kakumanuasish"
-          }}
-        ></AnchorTag>
-        <AnchorTag
-          options={{
-            username: "asishkakumanu",
-            class: "linkedin",
-            href: "https://www.linkedin.com/in/asishkakumanu/"
-          }}
-        ></AnchorTag>
         <p className="lastfm">
           <span className="eq">
             <img src={equalizer} alt="Equalizer Icon"></img>
@@ -71,6 +73,6 @@ const IndexPage = ({ data }) => (
     </div>
     <div className="HeroBack darkmode-ignore" />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
