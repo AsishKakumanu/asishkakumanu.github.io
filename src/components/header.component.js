@@ -1,12 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-import favicon from "../images/favicon.png"
+import React from "react";
+import { Link } from "gatsby";
+import favicon from "../images/favicon.png";
 
 export default class header extends React.Component {
   render() {
     return (
       <header>
-        <a href="#" className="alogo">
+        <a href="/" className="alogo">
           <img className="logo" src={favicon} alt="Logo" />
         </a>
 
@@ -23,13 +23,13 @@ export default class header extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to="/page-2/" className="hover">
+              <Link to="/page-3/" className="hover">
                 Contact 🚧
               </Link>
             </li>
           </ul>
         </nav>
       </header>
-    )
+    );
   }
 }

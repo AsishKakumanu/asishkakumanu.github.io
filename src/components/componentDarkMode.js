@@ -1,4 +1,4 @@
-import Darkmode from "darkmode-js"
+import Darkmode from "darkmode-js";
 
 var options = {
   bottom: "15px", // default: '32px'
@@ -10,10 +10,10 @@ var options = {
   buttonColorDark: "#100f2c", // default: '#100f2c'
   buttonColorLight: "#fff", // default: '#fff'
   saveInCookies: true, // default: true,
-  label: "💡", // default: ''
-  autoMatchOsTheme: true // default: true
-}
+  label: "🌒", // default: ''
+  autoMatchOsTheme: true, // default: true
+};
 
-const ComponentDarkMode = new Darkmode(options).showWidget()
+const ComponentDarkMode = new Darkmode(options).showWidget();
 
-export default ComponentDarkMode
+export default ComponentDarkMode;
