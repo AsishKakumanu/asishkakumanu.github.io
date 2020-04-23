@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
+  // max-width: 100%;
 
   & > img {
     transform: scale(0.5);
