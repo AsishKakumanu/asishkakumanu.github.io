@@ -145,32 +145,27 @@ span.h3IntroSpan.emoji {
     display: none;
   }
 
-  &:hover {
-    @include hoverEffect;
-    cursor: pointer;
+  @media (hover: none) and (any-pointer: coarse) {
+    &:hover {
+      @include hoverEffect;
+      cursor: pointer;
 
-    & a {
-      display: unset;
-      transition: 2s;
+      & a {
+        display: unset;
+        transition: 2s;
+      }
     }
   }
 
-  &:focus {
-    @include hoverEffect;
-    cursor: pointer;
+  @media (hover: hover) and (any-pointer: fine) {
+    &:hover {
+      @include hoverEffect;
+      cursor: pointer;
 
-    & a {
-      display: unset;
-      transition: 2s;
-    }
-  }
-
-  &:active {
-    @include hoverEffect;
-    cursor: pointer;
-
-    & a {
-      display: unset;
+      & a {
+        display: unset;
+        transition: 2s;
+      }
     }
   }
 
