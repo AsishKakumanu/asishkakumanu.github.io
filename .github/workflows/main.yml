@@ -1,6 +1,8 @@
 name: Gatsby Publish
 
 on:
+  schedule:
+    - cron: "0-59/45 * * * *"
   push:
     branches:
       - develop
