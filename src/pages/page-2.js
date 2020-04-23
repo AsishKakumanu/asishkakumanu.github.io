@@ -12,6 +12,7 @@ const SecondPage = () => (
     <div className="Hero page2">
       <div className="SubHero">
         Projects page
+        <br />
         <Link to="/">Go back to the homepage</Link>
       </div>
     </div>
