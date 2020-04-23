@@ -141,9 +141,37 @@ span.h3IntroSpan.emoji {
   filter: drop-shadow(-10px 0px 20px #999090);
   text-decoration: none;
 
+  & a {
+    display: none;
+  }
+
   &:hover {
     @include hoverEffect;
     cursor: pointer;
+
+    & a {
+      display: unset;
+      transition: 2s;
+    }
+  }
+
+  &:focus {
+    @include hoverEffect;
+    cursor: pointer;
+
+    & a {
+      display: unset;
+      transition: 2s;
+    }
+  }
+
+  &:active {
+    @include hoverEffect;
+    cursor: pointer;
+
+    & a {
+      display: unset;
+    }
   }
 
   & > a {
