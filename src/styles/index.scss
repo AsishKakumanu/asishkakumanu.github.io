@@ -67,6 +67,11 @@ a {
 .h3Intro {
   font-weight: 200;
   color: #a0aec0;
+  opacity: 0;
+  animation: h3IntroAnimation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 span.h3IntroSpan.emoji {
@@ -116,6 +121,11 @@ span.h3IntroSpan.emoji {
 .IntroPara {
   color: $NameColor;
   @include font200();
+  opacity: 0;
+  animation: IntroPara;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .font300 {
@@ -200,44 +210,51 @@ span.h3IntroSpan.emoji {
 }
 
 header {
-  position: sticky;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 6%;
-  height: 30px;
-  top: 30px;
-  z-index: 3;
+  position: fixed;
+  width: 100%;
 
-  & > .alogo {
-    cursor: pointer;
-    padding-top: 15px;
-  }
+  z-index: 100;
 
-  & > a > img {
-    width: 40px;
-    height: 40px;
-  }
+  & > .headerGroup {
+    padding: 30px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-items: center;
 
-  & > li,
-  a {
-    font-weight: 400px;
-    font-size: 15px;
-    text-decoration: none;
-  }
-
-  & > nav > ul {
-    list-style-type: none;
-
-    & > li {
-      display: inline-block;
-      padding: 0px 20px;
-
-      & > a {
-        font-weight: 700;
-        color: $NameColor;
-      }
+    & > .alogo {
+      cursor: pointer;
     }
+
+    & > a > img {
+      width: 40px;
+      height: 40px;
+      margin-top: 5px;
+    }
+
+    & > a {
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      color: $NameColor;
+    }
+  }
+
+  & > .HeaderScrolled {
+    padding: 5px 0px;
+  }
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .HeaderScrolled {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .HeaderScrolled {
+    background: rgba(255, 255, 255, 0.9);
   }
 }
