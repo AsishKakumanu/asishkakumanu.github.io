@@ -1,3 +1,5 @@
+$NameColor: #2d3748;
+
 @mixin hoverEffect {
   transform: scale(1.02);
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2);
@@ -7,4 +9,30 @@
   font-weight: 300;
 }
 
-$NameColor: #2d3748;
+@mixin font400 {
+  font-weight: lighter;
+}
+
+@keyframes h3IntroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes IntroPara {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

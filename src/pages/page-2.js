@@ -4,6 +4,9 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Header from "../components/header.component";
+import ProjectCard from "../components/projectCard.component";
+
+import projectData from "../../src/projects.json";
 
 const SecondPage = () => (
   <Layout>
@@ -11,9 +14,14 @@ const SecondPage = () => (
     <Header></Header>
     <div className="Hero page2">
       <div className="SubHero">
-        Projects page
+        <h3 className="Headline">Projects</h3>
+        <div className="projectsDiv">
+          {projectData.cells.map((cell) => (
+            <ProjectCard title={cell.title} description={cell.description} />
+          ))}
+        </div>
+
         <br />
-        <Link to="/">Go back to the homepage</Link>
       </div>
     </div>
   </Layout>

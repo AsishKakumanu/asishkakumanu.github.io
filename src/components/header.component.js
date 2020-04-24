@@ -26,22 +26,22 @@ export default class header extends React.Component {
 
   render() {
     return (
-      <header>
-        <div
-          className={`headerGroup ${
-            this.state.hasScrolled ? "HeaderScrolled" : "Header"
-          }`}
-        >
+      <header
+        className={`header ${
+          this.state.hasScrolled ? "HeaderScrolled" : "Header"
+        }`}
+      >
+        <div className={`headerGroup`}>
           <a href="/" className="alogo">
             <img className="logo" src={favicon} alt="Logo" />
           </a>
-          <Link to="/" className="home">
+          <Link to="/" className="home" id="underline">
             Home
           </Link>
-          <Link to="/page-2/" className="projects">
+          <Link to="/page-2/" className="projects" id="underline">
             Projects
           </Link>
-          <Link to="/page-3/" className="contact">
+          <Link to="/page-3/" className="contact" id="underline">
             Contact 🚧
           </Link>
         </div>

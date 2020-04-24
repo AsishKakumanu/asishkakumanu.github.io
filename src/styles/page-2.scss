@@ -43,5 +43,55 @@
       }
     }
   }
+
+  & > .SubHero {
+    padding: 110px 110px;
+    max-width: 100% !important;
+
+    & > .projectsDiv {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+    }
+  }
 }
 
+@media (max-width: 1370px) {
+  .projectsDiv {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .Headline {
+    text-align: center;
+  }
+
+  .page2 > .SubHero {
+    padding: 80px 80px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .projectsDiv {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .page2 > .SubHero {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .projectsDiv {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .page2 > .SubHero {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .page2 > .SubHero {
+    padding: 80px 10px;
+  }
+}

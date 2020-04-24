@@ -15,6 +15,7 @@ import "../styles/page-2.scss";
 import "../styles/404.scss";
 import "../styles/queries.scss";
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

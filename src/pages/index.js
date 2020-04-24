@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import AnchorTag from "../components/anchor.component";
 import HeaderTag from "../components/header.component";
+import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
 
 // import Image from "../components/image"
@@ -23,6 +24,8 @@ export const lastfmTrack = graphql`
   }
 `;
 
+const textLines = [`Software`, `Front-end`];
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Personal Website" />
@@ -34,12 +37,31 @@ const IndexPage = ({ data }) => (
           Hey <span className="h3IntroSpan darkmode-ignore">👋🏻</span>! My name
           is <span className="h3IntroSpan Name"> Asish Kakumanu</span>
         </h3>
-        <p className="IntroPara decreaseMarginTop font200">
-          I'm a 26 year old <span className="underline font300">Software</span>{" "}
-          & <span className="underline font300">Front-End Developer</span> based
-          in Sunnyvale, California.
+        <p className="IntroPara  noMarginBottom font200">
+          I'm a 26 year old{" "}
+          <span className="underline font300">
+            <Typed
+              strings={["Software", "Front-end", "Software, Front-end"]}
+              typeSpeed={80}
+              cursorChar=" "
+            />
+          </span>
+          {""}
+          <span className="underline font300">Developer</span> based in
+          Sunnyvale, California.
+        </p>
+        <p className="IntroPara font200">
+          By day, I'm a Research Intern at SUNY Buffalo, by night I work on
+          personal projects.{" "}
         </p>
         <div className="anchorDiv">
+          <AnchorTag
+            options={{
+              username: "Hire Me",
+              class: "twitter",
+              href: "/page-2",
+            }}
+          ></AnchorTag>
           <AnchorTag
             options={{
               username: "KakumanuAsish",

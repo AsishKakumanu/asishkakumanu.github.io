@@ -27,7 +27,8 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-inlinesvg": "^1.2.0",
-    "react-lottie": "^1.2.3"
+    "react-lottie": "^1.2.3",
+    "react-typed": "^1.2.0"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",

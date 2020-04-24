@@ -1,17 +1,20 @@
-import React from "react"
-import twitter from "../images/twitter.svg"
-import linkedin from "../images/linkedin.svg"
+import React from "react";
+import twitter from "../images/twitter.svg";
+import linkedin from "../images/linkedin.svg";
+import linkArrow from "../images/linkArrow.svg";
 
 export default class anchor extends React.Component {
   render() {
     const Image = () => {
       switch (this.props.options.class) {
         case "twitter":
-          return <img src={twitter} />
+          return <img src={twitter} />;
         case "linkedin":
-          return <img src={linkedin} style={{ width: `23px` }} />
+          return <img src={linkedin} style={{ width: `23px` }} />;
+        case "linkArrow":
+          return <img src={linkArrow} />;
       }
-    }
+    };
 
     return (
       <a
@@ -26,7 +29,8 @@ export default class anchor extends React.Component {
           {/* Add the username here */}
           {this.props.options.username}
         </p>
+        <div>{}</div>
       </a>
-    )
+    );
   }
 }
