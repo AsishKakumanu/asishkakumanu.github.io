@@ -41,7 +41,7 @@ export default class header extends React.Component {
           <Link to="/page-2/" className="projects" id="underline">
             Projects
           </Link>
-          <Link to="/page-3/" className="contact" id="underline">
+          <Link to="/contact/" className="contact" id="underline">
             Contact 🚧
           </Link>
         </div>

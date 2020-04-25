@@ -2,6 +2,11 @@ import React from "react";
 import twitter from "../images/twitter.svg";
 import linkedin from "../images/linkedin.svg";
 import linkArrow from "../images/linkArrow.svg";
+import insta from "../images/insta.svg";
+import github from "../images/github.svg";
+import telegram from "../images/telegram.svg";
+import whatsapp from "../images/whatsapp.png";
+import mail from "../images/mail.svg";
 
 export default class anchor extends React.Component {
   render() {
@@ -13,6 +18,21 @@ export default class anchor extends React.Component {
           return <img src={linkedin} style={{ width: `23px` }} />;
         case "linkArrow":
           return <img src={linkArrow} />;
+        case "insta":
+          return <img src={insta} style={{ "padding-top": `5px` }} />;
+        case "github":
+          return <img src={github} style={{ "padding-top": `5px` }} />;
+        case "telegram":
+          return <img src={telegram} style={{ "padding-top": `5px` }} />;
+        case "whatsapp":
+          return (
+            <img
+              src={whatsapp}
+              style={{ width: `25px`, height: `25px`, "padding-top": `5px` }}
+            />
+          );
+        case "mail":
+          return <img src={mail} style={{ "padding-top": `5px` }} />;
       }
     };
 

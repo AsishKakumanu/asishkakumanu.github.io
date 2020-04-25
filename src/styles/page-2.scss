@@ -56,6 +56,14 @@
   }
 }
 
+.projectCardInnerDiv {
+  text-align: left !important;
+}
+
+.projectDesc {
+  font-size: 13px !important;
+}
+
 @media (max-width: 1370px) {
   .projectsDiv {
     grid-template-columns: repeat(3, 1fr) !important;

@@ -14,7 +14,7 @@ import "../styles/index.scss";
 import "../styles/page-2.scss";
 import "../styles/404.scss";
 import "../styles/queries.scss";
-
+import "../styles/contact.scss";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

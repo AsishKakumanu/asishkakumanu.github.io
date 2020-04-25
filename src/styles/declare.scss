@@ -13,6 +13,41 @@ $NameColor: #2d3748;
   font-weight: lighter;
 }
 
+@mixin label {
+  font-size: 16px;
+  text-transform: uppercase;
+  align-self: end;
+  color: #cbd5e0;
+}
+
+@mixin placeholder {
+  color: white;
+  font-size: 15px;
+}
+
+@mixin focus {
+  color: white;
+  font-size: 15px;
+}
+
+@mixin gridName {
+  display: grid;
+  padding: 0px 10px;
+}
+
+@mixin input {
+  border-radius: 0.25rem;
+  height: 30px;
+  background-color: #2d3748;
+  border-color: #4a5568;
+  border-width: 0.1px;
+  padding: 5px 5px;
+  margin: 5px 0px;
+  caret-color: white;
+  color: white;
+  font-size: 15px;
+}
+
 @keyframes h3IntroAnimation {
   0% {
     opacity: 0;

@@ -1,0 +1,286 @@
+@import "./declare.scss";
+
+.contactPage {
+  & > .contactSubHero {
+    padding: 160px 110px;
+    max-width: 100% !important;
+
+    // & > .sectionHeader {
+    //   position: absolute;
+    //   font-weight: 800;
+    //   font-size: 130px;
+    //   right: 110px;
+    //   text-align: right;
+    //   z-index: 3;
+    // }
+
+    & > .contactContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: auto;
+
+      & > .linksDiv {
+        background: white;
+
+        & > .linkHeader {
+          color: #2d3748;
+        }
+
+        & > .linkContainer {
+          display: grid;
+          grid-template-columns: repeat(2, fit-content(50%));
+          grid-template-areas:
+            "a c"
+            "b d";
+
+          & > .twitter {
+            grid-area: a;
+          }
+
+          & > .insta {
+            grid-area: b;
+          }
+
+          & > .linkedin {
+            grid-area: c;
+            // justify-self: center;
+          }
+
+          & > .github {
+            grid-area: d;
+          }
+        }
+      }
+
+      & > .contactInfo {
+        background: #1a202c;
+        border-radius: 30px;
+        margin: 0px 20px 0px 20px;
+        padding: 0px 40px;
+        display: grid;
+        // grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+
+        & > .header {
+          color: #cbd5e0;
+          margin-bottom: 0px;
+          align-self: center;
+        }
+
+        & > form > .firstRow {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: baseline;
+
+          & > .name {
+            @include gridName;
+
+            & > .labelForName {
+              @include label;
+            }
+
+            & > .nameInput {
+              @include input;
+
+              &:focus {
+                @include focus;
+              }
+
+              &::placeholder {
+                @include placeholder;
+              }
+            }
+          }
+
+          & > .email {
+            @include gridName;
+
+            & > .labelForEmail {
+              @include label;
+            }
+
+            & > .emailInput {
+              @include input;
+
+              &:focus {
+                @include focus;
+              }
+
+              &::placeholder {
+                @include placeholder;
+              }
+            }
+          }
+        }
+
+        & > form > .secondRow {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "su"
+            "me";
+
+          grid-template-rows: auto auto;
+
+          & > .subject {
+            grid-area: su;
+            @include gridName;
+
+            & > .labelForSubject {
+              @include label;
+            }
+
+            & > .subjectInput {
+              @include input;
+
+              &:focus {
+                @include focus;
+              }
+
+              &::placeholder {
+                @include placeholder;
+              }
+            }
+          }
+
+          & > .message {
+            grid-area: me;
+            @include gridName;
+
+            & > .labelForMessage {
+              @include label;
+            }
+
+            & > .messageInput {
+              @include input;
+              height: 120px !important;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+                Droid Sans, Helvetica Neue, Arial, Noto Sans, sans-serif,
+                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+                Noto Color Emoji;
+
+              &:focus {
+                @include focus;
+              }
+
+              &::placeholder {
+                @include placeholder;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fontWeight350 {
+  font-weight: 350;
+  color: #a0aec0;
+}
+
+.linkContainer2 {
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(50%));
+  grid-template-areas: "e f";
+
+  & > .telegram {
+    grid-area: e;
+    // justify-self: center;
+  }
+
+  & > .whatsapp {
+    grid-area: f;
+  }
+}
+
+h3.header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+// .darkmode--activated .contactInfo {
+//   background: #5f513f !important;
+// }
+
+@media screen and (max-width: 1111px) {
+  .contactPage > .contactSubHero > .contactContainer > .linksDiv > .linkHeader {
+    text-align: center;
+  }
+  .contactPage > .contactSubHero > .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    .linksDiv > .linkContainer,
+    .linkContainer2 {
+      grid-template-columns: auto;
+    }
+  }
+
+  .contactPara {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .contactPage > .contactSubHero {
+    padding: 160px 80px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contactPage > .contactSubHero {
+    padding: 160px 20px;
+  }
+
+  .contactPage
+    > .contactSubHero
+    > .contactContainer
+    > .linksDiv
+    > .linkContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px));
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .contactPage > .contactSubHero {
+    padding: 160px 20px;
+  }
+
+  .contactPage
+    > .contactSubHero
+    > .contactContainer
+    .linksDiv
+    > .linkContainer {
+    grid-template-columns: auto;
+    grid-template-areas: "a" "b" "c" "d";
+    max-width: 630px;
+    justify-items: center;
+    // grid-template-areas: "a" "b" "c" "d";
+  }
+
+  .contactPage
+    > .contactSubHero
+    > .contactContainer
+    > .contactInfo
+    > form
+    > .firstRow {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contactPage > .contactSubHero > .contactContainer .linkContainer2 {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "e" "f";
+    justify-items: center;
+  }
+
+  .contactPage > .contactSubHero > .contactContainer > .contactInfo {
+    margin: 0px 0px;
+  }
+
+  .whatsapp > div:nth-child(1) > img:nth-child(1) {
+    padding: 0px 20px !important;
+  }
+}

@@ -10,7 +10,7 @@ import projectData from "../../src/projects.json";
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Projects" />
     <Header></Header>
     <div className="Hero page2">
       <div className="SubHero">

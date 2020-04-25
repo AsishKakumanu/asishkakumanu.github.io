@@ -1,8 +1,10 @@
 @import "./declare.scss";
 
 .projectCard {
-  width: 225px;
-  height: 100px;
+  width: auto;
+  height: auto;
+  min-width: 225px;
+  min-height: 100px;
   margin: 13px 10px;
   padding: 20px 20px;
   border-radius: 10px;
@@ -12,6 +14,7 @@
   text-decoration: none;
   color: $NameColor;
   font-weight: 600;
+  background-image: url("../images/tiny_grid.png");
 
   & > .projectCardInnerDiv {
     display: grid;
@@ -26,8 +29,8 @@
 
   &:hover {
     box-shadow: 0px 0px 10px #2d3748;
-    background: #2d3748;
-    color: white;
+    transition: unset;
+    transform: unset;
   }
 }
 
