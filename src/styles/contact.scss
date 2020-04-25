@@ -205,6 +205,9 @@ h3.header {
 // }
 
 @media screen and (max-width: 1111px) {
+  .Hero > .contactSubHero {
+    padding-top: 80px;
+  }
   .contactPage > .contactSubHero > .contactContainer > .linksDiv > .linkHeader {
     text-align: center;
   }
@@ -225,13 +228,13 @@ h3.header {
 
 @media screen and (max-width: 920px) {
   .contactPage > .contactSubHero {
-    padding: 160px 80px;
+    padding: 80px 80px;
   }
 }
 
 @media screen and (max-width: 750px) {
   .contactPage > .contactSubHero {
-    padding: 160px 20px;
+    padding: 80px 20px;
   }
 
   .contactPage
@@ -245,7 +248,7 @@ h3.header {
 
 @media screen and (max-width: 630px) {
   .contactPage > .contactSubHero {
-    padding: 160px 20px;
+    padding: 80px 20px;
   }
 
   .contactPage
