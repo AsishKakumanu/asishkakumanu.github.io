@@ -19,7 +19,13 @@ export default class anchor extends React.Component {
             <img src={linkedin} alt="linkedin" style={{ width: `23px` }} />
           );
         case "linkArrow":
-          return <img src={linkArrow} alt="link" />;
+          return (
+            <img
+              src={linkArrow}
+              alt="link"
+              style={{ "padding-top": `5px`, "padding-right": `5px` }}
+            />
+          );
         case "insta":
           return (
             <img src={insta} alt="insta" style={{ "padding-top": `5px` }} />
@@ -46,6 +52,9 @@ export default class anchor extends React.Component {
           );
         case "mail":
           return <img src={mail} alt="mail" style={{ "padding-top": `5px` }} />;
+
+        default:
+          return {};
       }
     };
 
@@ -53,7 +62,7 @@ export default class anchor extends React.Component {
       <a
         className={`button darkmode-ignore ignore-fontSize ${this.props.options.class}`}
         href={this.props.options.href}
-        target="_blank"
+        target={this.props.options.target}
         rel="noopener noreferrer"
       >
         <div>{Image()}</div>

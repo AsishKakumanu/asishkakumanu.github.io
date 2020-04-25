@@ -31,6 +31,7 @@ const ContactPage = () => (
                   username: "KakumanuAsish",
                   class: "twitter",
                   href: "https://twitter.com/kakumanuasish",
+                  target: "_blank",
                 }}
               ></AnchorTag>
               <AnchorTag
@@ -38,6 +39,7 @@ const ContactPage = () => (
                   username: "asishkakumanu",
                   class: "insta",
                   href: "https://www.instagram.com/asishkakumanu/",
+                  target: "_blank",
                 }}
               ></AnchorTag>
               <AnchorTag
@@ -45,6 +47,7 @@ const ContactPage = () => (
                   username: "asishkakumanu",
                   class: "linkedin",
                   href: "https://www.linkedin.com/in/asishkakumanu/",
+                  target: "_blank",
                 }}
               ></AnchorTag>
               <AnchorTag
@@ -52,6 +55,7 @@ const ContactPage = () => (
                   username: "AsishKakumanu",
                   class: "github",
                   href: "https://github.com/AsishKakumanu",
+                  target: "_blank",
                 }}
               ></AnchorTag>
             </div>
@@ -64,6 +68,7 @@ const ContactPage = () => (
                   username: "AsishKakumanu",
                   class: "telegram",
                   href: "https://t.me/AsishKakumanu",
+                  target: "_blank",
                 }}
               ></AnchorTag>
               <AnchorTag
@@ -71,6 +76,7 @@ const ContactPage = () => (
                   username: "AK",
                   class: "whatsapp",
                   href: " https://wa.me/17164956462",
+                  target: "_blank",
                 }}
               ></AnchorTag>
             </div>

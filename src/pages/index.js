@@ -3,10 +3,13 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+
 import AnchorTag from "../components/anchor.component";
 import HeaderTag from "../components/header.component";
 import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
+
+import $ from "jquery";
 
 // import Image from "../components/image"
 
@@ -25,6 +28,20 @@ export const lastfmTrack = graphql`
 `;
 
 const textLines = [`Software`, `Front-end`];
+
+$(".darkmode-toggle").click(function() {
+  var clicked = $(document.body)
+    .children()
+    .hasClass("darkmode-toggle--white");
+
+  if (clicked === true) {
+    $(".darkmode-toggle--white").text("🌙");
+  } else {
+    $(".darkmode-toggle").text("☀️");
+  }
+  // console.log(clicked);
+  // clicked = clicked + 1;
+});
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -58,11 +75,12 @@ const IndexPage = ({ data }) => (
           <AnchorTag
             options={{
               username: "Hire Me",
-              class: "twitter",
-              href: "/page-2",
+              class: "linkArrow",
+              href: "/contact",
+              target: "",
             }}
           ></AnchorTag>
-          <AnchorTag
+          {/* <AnchorTag
             options={{
               username: "KakumanuAsish",
               class: "twitter",
@@ -74,8 +92,8 @@ const IndexPage = ({ data }) => (
               username: "asishkakumanu",
               class: "linkedin",
               href: "https://www.linkedin.com/in/asishkakumanu/",
-            }}
-          ></AnchorTag>
+            }} 
+          ></AnchorTag>*/}
         </div>
 
         <p className="lastfm">
@@ -87,8 +105,8 @@ const IndexPage = ({ data }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Last Played `{data.lastfmTrack.name} - {data.lastfmTrack.album.name}
-            `
+            Last Played `{data.lastfmTrack.name}`
+            {/* - {data.lastfmTrack.album.name} */}
           </a>
         </p>
       </div>

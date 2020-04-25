@@ -22,7 +22,7 @@ a {
   }
   &.button {
     position: relative;
-    z-index: 0;
+    z-index: 2;
     display: inline-flex;
     border-radius: 0.5rem;
     padding-left: 1rem;
@@ -52,6 +52,12 @@ a {
     &.linkArrow {
       background-color: #e1e5e6;
       color: #24292e;
+      margin-top: 30px;
+      padding: 0px 25px;
+
+      & > p > span {
+        display: none;
+      }
     }
 
     &.insta {
@@ -180,7 +186,7 @@ span.h3IntroSpan.emoji {
 }
 
 .darkmode-toggle {
-  z-index: 2;
+  z-index: 3;
 }
 
 // LastFm
@@ -192,9 +198,9 @@ span.h3IntroSpan.emoji {
   z-index: 2;
   color: #4f4343;
   background-color: antiquewhite;
-  padding: 8px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  padding: 16px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
   box-shadow: black;
   filter: drop-shadow(-10px 0px 20px #999090);
   text-decoration: none;
