@@ -13,26 +13,39 @@ export default class anchor extends React.Component {
     const Image = () => {
       switch (this.props.options.class) {
         case "twitter":
-          return <img src={twitter} />;
+          return <img src={twitter} alt="twitter" />;
         case "linkedin":
-          return <img src={linkedin} style={{ width: `23px` }} />;
+          return (
+            <img src={linkedin} alt="linkedin" style={{ width: `23px` }} />
+          );
         case "linkArrow":
-          return <img src={linkArrow} />;
+          return <img src={linkArrow} alt="link" />;
         case "insta":
-          return <img src={insta} style={{ "padding-top": `5px` }} />;
+          return (
+            <img src={insta} alt="insta" style={{ "padding-top": `5px` }} />
+          );
         case "github":
-          return <img src={github} style={{ "padding-top": `5px` }} />;
+          return (
+            <img src={github} alt="github" style={{ "padding-top": `5px` }} />
+          );
         case "telegram":
-          return <img src={telegram} style={{ "padding-top": `5px` }} />;
+          return (
+            <img
+              src={telegram}
+              alt="telegram"
+              style={{ "padding-top": `5px` }}
+            />
+          );
         case "whatsapp":
           return (
             <img
               src={whatsapp}
+              alt="whatsapp"
               style={{ width: `25px`, height: `25px`, "padding-top": `5px` }}
             />
           );
         case "mail":
-          return <img src={mail} style={{ "padding-top": `5px` }} />;
+          return <img src={mail} alt="mail" style={{ "padding-top": `5px` }} />;
       }
     };
 
