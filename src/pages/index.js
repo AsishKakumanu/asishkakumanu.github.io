@@ -9,7 +9,7 @@ import HeaderTag from "../components/header.component";
 import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
 
-import $ from "jquery";
+// import $ from "jquery";
 // window.$ = require("jquery")(window);
 
 // import Image from "../components/image"
@@ -33,19 +33,19 @@ const textLines = [`Software`, `Front-end`];
 // var jsdom = require("jsdom");
 // var window = jsdom.jsdom().defaultView;
 
-$(".darkmode-toggle").click(function() {
-  var clicked = $(document.body)
-    .children()
-    .hasClass("darkmode-toggle--white");
+// $(".darkmode-toggle").click(function() {
+//   var clicked = $(document.body)
+//     .children()
+//     .hasClass("darkmode-toggle--white");
 
-  if (clicked === true) {
-    $(".darkmode-toggle--white").text("🌙");
-  } else {
-    $(".darkmode-toggle").text("☀️");
-  }
-  // console.log(clicked);
-  // clicked = clicked + 1;
-});
+//   if (clicked === true) {
+//     $(".darkmode-toggle--white").text("🌙");
+//   } else {
+//     $(".darkmode-toggle").text("☀️");
+//   }
+//   // console.log(clicked);
+//   // clicked = clicked + 1;
+// });
 
 const IndexPage = ({ data }) => (
   <Layout>
