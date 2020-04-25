@@ -23,7 +23,7 @@ export default class anchor extends React.Component {
             <img
               src={linkArrow}
               alt="link"
-              style={{ "padding-top": `5px`, "padding-right": `5px` }}
+              style={{ paddingTop: `5px`, paddingRight: `5px` }}
             />
           );
         case "insta":

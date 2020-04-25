@@ -10,6 +10,7 @@ import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
 
 import $ from "jquery";
+// window.$ = require("jquery")(window);
 
 // import Image from "../components/image"
 
@@ -28,6 +29,9 @@ export const lastfmTrack = graphql`
 `;
 
 const textLines = [`Software`, `Front-end`];
+
+// var jsdom = require("jsdom");
+// var window = jsdom.jsdom().defaultView;
 
 $(".darkmode-toggle").click(function() {
   var clicked = $(document.body)
@@ -77,7 +81,7 @@ const IndexPage = ({ data }) => (
               username: "Hire Me",
               class: "linkArrow",
               href: "/contact",
-              target: "",
+              target: "_self",
             }}
           ></AnchorTag>
           {/* <AnchorTag
