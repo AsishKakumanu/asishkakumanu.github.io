@@ -9,9 +9,6 @@ import HeaderTag from "../components/header.component";
 import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
 
-// import $ from "jquery";
-// window.$ = require("jquery")(window);
-
 // import Image from "../components/image"
 
 import equalizer from "../images/equalizer-crop.gif";
@@ -30,22 +27,17 @@ export const lastfmTrack = graphql`
 
 const textLines = [`Software`, `Front-end`];
 
-// var jsdom = require("jsdom");
-// var window = jsdom.jsdom().defaultView;
+var el = document.querySelector(".darkmode-toggle");
+var clicked = false;
 
-// $(".darkmode-toggle").click(function() {
-//   var clicked = $(document.body)
-//     .children()
-//     .hasClass("darkmode-toggle--white");
-
-//   if (clicked === true) {
-//     $(".darkmode-toggle--white").text("🌙");
-//   } else {
-//     $(".darkmode-toggle").text("☀️");
-//   }
-//   // console.log(clicked);
-//   // clicked = clicked + 1;
-// });
+el.addEventListener("click", (event) => {
+  clicked = !clicked;
+  if (clicked === true) {
+    document.querySelector(".darkmode-toggle").innerText = "🌙";
+  } else {
+    document.querySelector(".darkmode-toggle").innerText = "☀️";
+  }
+});
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -84,20 +76,6 @@ const IndexPage = ({ data }) => (
               target: "_self",
             }}
           ></AnchorTag>
-          {/* <AnchorTag
-            options={{
-              username: "KakumanuAsish",
-              class: "twitter",
-              href: "https://twitter.com/kakumanuasish",
-            }}
-          ></AnchorTag>
-          <AnchorTag
-            options={{
-              username: "asishkakumanu",
-              class: "linkedin",
-              href: "https://www.linkedin.com/in/asishkakumanu/",
-            }} 
-          ></AnchorTag>*/}
         </div>
 
         <p className="lastfm">
