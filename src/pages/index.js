@@ -25,19 +25,18 @@ export const lastfmTrack = graphql`
   }
 `;
 
-const textLines = [`Software`, `Front-end`];
+// const textLines = [`Software`, `Front-end`];
 
-var el = document.querySelector(".darkmode-toggle");
-var clicked = false;
+// var el = document.querySelector(".darkmode-toggle");
+// var clicked = false;
 
-el.addEventListener("click", (event) => {
-  clicked = !clicked;
-  if (clicked === true) {
-    document.querySelector(".darkmode-toggle").innerText = "🌙";
-  } else {
-    document.querySelector(".darkmode-toggle").innerText = "☀️";
-  }
-});
+// el.addEventListener("click", (event) => {
+//   clicked = !clicked;
+//   if (clicked === true) {
+//     document.querySelector(".darkmode-toggle").innerText = "🌙";
+//   } else {
+//     document.querySelector(".darkmode-toggle").innerText = "☀️";
+//   }
 
 const IndexPage = ({ data }) => (
   <Layout>
