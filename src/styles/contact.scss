@@ -2,7 +2,7 @@
 
 .contactPage {
   & > .contactSubHero {
-    padding: 160px 110px;
+    padding: 160px 110px 0px 110px;
     max-width: 100% !important;
 
     // & > .sectionHeader {
@@ -168,6 +168,31 @@
               &::placeholder {
                 @include placeholder;
               }
+            }
+          }
+
+          .mailButton {
+            // padding: 0rem 1rem;
+            margin: 0.5rem 7px;
+            border-radius: 30px;
+            width: 180px;
+            background: url("https://raw.githubusercontent.com/AsishKakumanu/asishkakumanu.github.io/develop/src/images/mail.svg");
+            background-repeat: no-repeat;
+            background-size: 21px;
+            background-position-x: 53px;
+            background-position-y: 20px;
+            padding-left: 30px;
+            color: #007aff;
+            background-color: #e5f1ff;
+            border: none;
+            height: 55px;
+            justify-self: center;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:hover {
+              @include hoverEffect();
             }
           }
         }
