@@ -98,6 +98,7 @@ export class ContactPage extends React.Component {
                         type="text"
                         name="name"
                         placeholder="Enter your name"
+                        required="required"
                       />
                     </div>
                     <div className="email">
@@ -109,6 +110,7 @@ export class ContactPage extends React.Component {
                         type="email"
                         name="email"
                         placeholder="Enter your email"
+                        required="required"
                       />
                     </div>
                   </div>
