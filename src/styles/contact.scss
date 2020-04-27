@@ -28,14 +28,15 @@
 
         & > .linkContainer {
           display: grid;
+          justify-content: center;
           grid-template-columns: repeat(2, fit-content(50%));
           grid-template-areas:
-            "a c"
-            "b d";
+            "b d"
+            "c c";
 
-          & > .twitter {
-            grid-area: a;
-          }
+          //   & > .twitter {
+          //     // grid-area: a;
+          //   }
 
           & > .insta {
             grid-area: b;
@@ -43,7 +44,7 @@
 
           & > .linkedin {
             grid-area: c;
-            // justify-self: center;
+            justify-self: center;
           }
 
           & > .github {
@@ -182,7 +183,9 @@
 
 .linkContainer2 {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, fit-content(50%));
+  grid-template-rows: 60px;
   grid-template-areas: "e f";
 
   & > .telegram {
@@ -198,6 +201,10 @@
 h3.header {
   text-align: center;
   padding-bottom: 10px;
+}
+
+.contactPara {
+  text-align: center;
 }
 
 // .darkmode--activated .contactInfo {
@@ -219,10 +226,6 @@ h3.header {
     .linkContainer2 {
       grid-template-columns: auto;
     }
-  }
-
-  .contactPara {
-    text-align: center;
   }
 }
 
@@ -281,9 +284,5 @@ h3.header {
 
   .contactPage > .contactSubHero > .contactContainer > .contactInfo {
     margin: 0px 0px;
-  }
-
-  .whatsapp > div:nth-child(1) > img:nth-child(1) {
-    padding: 0px 20px !important;
   }
 }

@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => (
         <div className="anchorDiv">
           <AnchorTag
             options={{
-              username: "Hire Me",
+              username: "Contact Me",
               class: "linkArrow",
               href: "/contact",
               target: "_self",

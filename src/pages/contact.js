@@ -18,22 +18,23 @@ const ContactPage = () => (
               <span className="underline">Links</span>
             </h3>
             <p className="contactPara fontWeight350">
-              Here are all the ways you can contact me. I'm mostly active in
-              Linkedin <span className="darkmode-ignore">💼</span>{" "}
+              Here are all the ways you can connect to me or follow my work. I'm
+              mostly active in Linkedin{" "}
+              <span className="darkmode-ignore">💼</span>{" "}
               <span style={{ "font-weight": `200`, "font-size": `20px` }}>
                 &
               </span>{" "}
               Instagram <span className="darkmode-ignore">📸</span>.
             </p>
             <div className="linkContainer">
-              <AnchorTag
+              {/* <AnchorTag
                 options={{
                   username: "KakumanuAsish",
                   class: "twitter",
                   href: "https://twitter.com/kakumanuasish",
                   target: "_blank",
                 }}
-              ></AnchorTag>
+              ></AnchorTag> */}
               <AnchorTag
                 options={{
                   username: "asishkakumanu",
@@ -83,7 +84,7 @@ const ContactPage = () => (
           </div>
           <div className="contactInfo">
             <h3 className="header">
-              <span className="underline">Hire Me!</span>{" "}
+              <span className="underline">Let's Discuss!</span>{" "}
               <span className="darkmode-ignore">🤓</span>
             </h3>
             <form
