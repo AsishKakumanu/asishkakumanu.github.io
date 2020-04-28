@@ -18,7 +18,7 @@
 
   & > .projectCardInnerDiv {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 5fr 1fr;
 
     & > .projectDesc {
       @include font400;

@@ -2,23 +2,63 @@
   "cells": [
     {
       "title": "My Portolio Website",
-      "description": "React JS"
+      "description": "React JS",
+      "url": "https://github.com/AsishKakumanu/asishkakumanu.github.io"
     },
     {
       "title": "GradCafe Telegram Bot",
-      "description": "Python, Telebot API"
+      "description": "Python, Telebot API",
+      "url": "https://github.com/AsishKakumanu/GradCafe-Crawler"
     },
     {
-      "title": "GradCafe Telegram Bot",
-      "description": "Python, Telebot API"
+      "title": "Simple DynamoDB",
+      "description": "Java, Android",
+      "url": "https://github.com/AsishKakumanu/CSE586-DistributedSystems/tree/master/PA4-SimpleDynamo"
     },
     {
-      "title": "GradCafe Telegram Bot",
-      "description": "Python, Telebot API"
+      "title": "Group Messenger",
+      "description": "Java, Android",
+      "url": "https://github.com/AsishKakumanu/CSE586-DistributedSystems/tree/master/PA2/B"
     },
     {
-      "title": "GradCafe Telegram Bot",
-      "description": "Python, Telebot API"
+      "title": "Grid Localization using Bayes Filter",
+      "description": "Python, ROS",
+      "url": "https://github.com/AsishKakumanu/CSE568-Robotic-Algorithms/tree/master/lab4"
+    },
+    {
+      "title": "Handwriting Recognition using Machine Learing",
+      "description": "Python",
+      "url": "https://github.com/AsishKakumanu/CSE574-Machine-Learning/tree/master/P2"
+    },
+    {
+      "title": "Digit Classification",
+      "description": "Python",
+      "url": "https://github.com/AsishKakumanu/CSE574-Machine-Learning/tree/master/P3"
+    },
+    {
+      "title": "Document Search Engine",
+      "description": "Java",
+      "url": "https://github.com/AsishKakumanu/CSE535-Information-Retrieval/tree/master/P2"
+    },
+    {
+      "title": "Laser Based Perception and Navigation with Obstacle Avoidance",
+      "description": "Python, ROS",
+      "url": "https://github.com/AsishKakumanu/CSE568-Robotic-Algorithms/tree/master/lab2"
+    },
+    {
+      "title": "OTP Detection",
+      "description": "Java, Android",
+      "url": "https://drive.google.com/open?id=1TH8WslOs2D4DmT0eesIKEdDbsz0U5h72"
+    },
+    {
+      "title": "Custom AOSP ROM",
+      "description": "C, DSIXDA Kitchen",
+      "url": ""
+    },
+    {
+      "title": "WLAN Chat",
+      "description": "Java, HTML, CSS, JQuery",
+      "url": ""
     }
   ]
 }

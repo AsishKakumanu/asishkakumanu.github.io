@@ -7,7 +7,7 @@ export default class projectCard extends React.Component {
   render() {
     return (
       <a
-        href="/"
+        href={this.props.url}
         className={`projectCard ignore-fontSize `}
         target="_blank"
         rel="noopener noreferrer"

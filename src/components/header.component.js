@@ -38,11 +38,11 @@ export default class header extends React.Component {
           <Link to="/" className="home" id="underline">
             Home
           </Link>
-          <Link to="/page-2/" className="projects 🚧" id="underline">
+          <Link to="/projects/" className="projects" id="underline">
             Projects
           </Link>
           <Link to="/contact/" className="contact" id="underline">
-            Contact 🚧
+            Contact
           </Link>
         </div>
       </header>

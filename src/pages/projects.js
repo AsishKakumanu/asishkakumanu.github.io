@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import Header from "../components/header.component";
 import ProjectCard from "../components/projectCard.component";
 
-import projectData from "../../src/projects.json";
+import projectData from "../projects.json";
 
 const SecondPage = () => (
   <Layout>
@@ -17,7 +17,11 @@ const SecondPage = () => (
         <h3 className="Headline">Projects</h3>
         <div className="projectsDiv">
           {projectData.cells.map((cell) => (
-            <ProjectCard title={cell.title} description={cell.description} />
+            <ProjectCard
+              title={cell.title}
+              description={cell.description}
+              url={cell.url}
+            />
           ))}
         </div>
 
