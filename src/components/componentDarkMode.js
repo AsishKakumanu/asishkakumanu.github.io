@@ -16,4 +16,5 @@ var options = {
 
 const ComponentDarkMode = new Darkmode(options).showWidget();
 
+
 export default ComponentDarkMode;

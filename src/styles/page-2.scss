@@ -53,6 +53,11 @@
       grid-template-columns: repeat(4, 1fr);
       // justify-items: center;
     }
+
+    & > .Headline {
+      color: #2d3748;
+      isolation: isolate;
+    }
   }
 }
 

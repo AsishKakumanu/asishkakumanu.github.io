@@ -13,7 +13,7 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <Header></Header>
     <div className="subHero page404">
-      <img src={_404Gif} alt="404 Error Image"></img>
+      <img src={_404Gif} alt="404 Error"></img>
     </div>
   </Layout>
 );

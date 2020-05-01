@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
@@ -50,6 +50,7 @@ export class IndexPage extends React.Component {
 
   componentDidMount() {
     this.changeDarkModeIcon();
+    console.log(ComponentDarkMode);
   }
 
   render() {
@@ -61,8 +62,16 @@ export class IndexPage extends React.Component {
           <HeaderTag></HeaderTag>
           <div className="SubHero">
             <h3 className="h3Intro noMarginBottom">
-              Hey <span className="h3IntroSpan darkmode-ignore">👋🏻</span>! My
-              name is <span className="h3IntroSpan Name"> Asish Kakumanu</span>
+              Hey{" "}
+              <span
+                className="h3IntroSpan darkmode-ignore"
+                role="img"
+                aria-label=" :wave: "
+              >
+                👋🏻
+              </span>
+              ! My name is{" "}
+              <span className="h3IntroSpan Name"> Asish Kakumanu</span>
             </h3>
             <p className="IntroPara  noMarginBottom font200">
               I'm a 26 year old{" "}

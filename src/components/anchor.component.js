@@ -27,31 +27,25 @@ export default class anchor extends React.Component {
             />
           );
         case "insta":
-          return (
-            <img src={insta} alt="insta" style={{ "padding-top": `5px` }} />
-          );
+          return <img src={insta} alt="insta" style={{ paddingTop: `5px` }} />;
         case "github":
           return (
-            <img src={github} alt="github" style={{ "padding-top": `5px` }} />
+            <img src={github} alt="github" style={{ paddingTop: `5px` }} />
           );
         case "telegram":
           return (
-            <img
-              src={telegram}
-              alt="telegram"
-              style={{ "padding-top": `5px` }}
-            />
+            <img src={telegram} alt="telegram" style={{ paddingTop: `5px` }} />
           );
         case "whatsapp":
           return (
             <img
               src={whatsapp}
               alt="whatsapp"
-              style={{ width: `25px`, height: `25px`, "padding-top": `5px` }}
+              style={{ width: `25px`, height: `25px`, paddingTop: `5px` }}
             />
           );
         case "mail":
-          return <img src={mail} alt="mail" style={{ "padding-top": `5px` }} />;
+          return <img src={mail} alt="mail" style={{ paddingTop: `5px` }} />;
 
         default:
           return {};

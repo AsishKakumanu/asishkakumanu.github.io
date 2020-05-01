@@ -24,6 +24,7 @@
 
         & > .linkHeader {
           color: #2d3748;
+          isolation: isolate;
         }
 
         & > .linkContainer {
@@ -230,6 +231,7 @@ h3.header {
 
 .contactPara {
   text-align: center;
+  isolation: isolate;
 }
 
 // .darkmode--activated .contactInfo {

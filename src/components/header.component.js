@@ -33,7 +33,7 @@ export default class header extends React.Component {
       >
         <div className={`headerGroup`}>
           <a href="/" className="alogo">
-            <img className="logo" alt="headerLogo" src={favicon} alt="Logo" />
+            <img className="logo" alt="headerLogo" src={favicon} />
           </a>
           <Link to="/" className="home" id="underline">
             Home

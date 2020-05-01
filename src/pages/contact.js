@@ -3,7 +3,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Header from "../components/header.component";
 import AnchorTag from "../components/anchor.component";
-import TextareaAutosize from "react-autosize-textarea";
 
 export class ContactPage extends React.Component {
   render() {
@@ -21,11 +20,9 @@ export class ContactPage extends React.Component {
                 <p className="contactPara fontWeight350">
                   Here are all the ways you can connect to me or follow my work.
                   I'm mostly active in Linkedin{" "}
-                  <span className="darkmode-ignore">💼</span>{" "}
-                  <span style={{ "font-weight": `200`, "font-size": `20px` }}>
-                    &
-                  </span>{" "}
-                  Instagram <span className="darkmode-ignore">📸</span>.
+                  <span className="darkmode-ignore" role="img" aria-label=":suitcase:">💼</span>{" "}
+                  <span style={{ fontWeight: `200`, fontSize: `20px` }}>&</span>{" "}
+                  Instagram <span className="darkmode-ignore" role="img" aria-label=":camera:">📸</span>.
                 </p>
                 <div className="linkContainer">
                   <AnchorTag
@@ -75,10 +72,10 @@ export class ContactPage extends React.Component {
                   ></AnchorTag>
                 </div>
               </div>
-              <div className="contactInfo">
+              <div className="contactInfo darkmode-ignore">
                 <h3 className="header">
                   <span className="underline">Let's Discuss!</span>{" "}
-                  <span className="darkmode-ignore">🤓</span>
+                  <span className="darkmode-ignore" role="img" aria-label=":nerd:">🤓</span>
                 </h3>
                 <form
                   action="https://getform.io/f/f4b3a745-10da-416a-90cc-f2c7cc5c7560"

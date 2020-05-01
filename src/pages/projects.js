@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -14,10 +14,13 @@ const SecondPage = () => (
     <Header></Header>
     <div className="Hero page2">
       <div className="SubHero">
-        <h3 className="Headline">Projects</h3>
+        <h3 className="Headline">
+          <span className="underline">Projects</span>
+        </h3>
         <div className="projectsDiv">
           {projectData.cells.map((cell) => (
             <ProjectCard
+              key={cell.title}
               title={cell.title}
               description={cell.description}
               url={cell.url}

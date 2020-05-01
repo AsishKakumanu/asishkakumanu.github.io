@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../styles/projectCard.scss";
-import AnchorTag from "../components/anchor.component";
 
 export default class projectCard extends React.Component {
   render() {
