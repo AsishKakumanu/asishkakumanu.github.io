@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.0.0-alpha.0",
+    "@zeit-ui/react": "^1.0.0-rc.10",
+    "@zeit-ui/react-icons": "^1.2.1",
     "darkmode-js": "^1.5.5",
     "es6-promise": "^4.2.8",
     "gatsby": "^2.15.9",
@@ -25,10 +28,11 @@
     "jquery": "^3.5.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
+    "react": "^16.13.1",
     "react-autosize-textarea": "^7.0.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.10.0",
     "react-inlinesvg": "^1.2.0",
     "react-lottie": "^1.2.3",
     "react-typed": "^1.2.0"

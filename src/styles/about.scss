@@ -1,0 +1,169 @@
+@import "./declare.scss";
+
+.about {
+  & .AboutSubHero {
+    padding: 120px 110px 0 110px;
+    max-width: 100% !important;
+
+    & > .container {
+      display: grid;
+
+      & > .resumeContainer {
+        display: inline-grid;
+        justify-content: end;
+        padding-bottom: 20px;
+
+        & > .tooltip > a > .resume {
+          background: #2d3748;
+          border: none;
+        }
+      }
+
+      & > .aboutSection {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        width: auto;
+
+        & > .leftContainer {
+          padding-right: 10px;
+          color: $NameColor;
+          font-size: 13px;
+
+          & > h1,
+          & > h2,
+          & > h3,
+          & > h4,
+          & > h5,
+          & > h6 {
+            line-height: 0px;
+            margin-top: 0px;
+          }
+
+          & > .collapseGroup {
+            color: $NameColor;
+            filter: drop-shadow(0px 5px 25px #b6cdcd);
+
+            & > .collapse > .view > .title {
+              color: $NameColor;
+            }
+
+            & > .collapse > .container > .content > .content > .icons {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              padding: 10px;
+
+              & > svg {
+                width: 30px;
+                height: 30px;
+                padding: 10px;
+              }
+            }
+          }
+        }
+
+        & > .rightContainer {
+          justify-content: end;
+          filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.351));
+        }
+      }
+    }
+  }
+}
+
+.darkmode--activated {
+  /* Inline #15 | http://localhost:8000/about/ */
+  .collapse {
+    background: $NameColor;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    padding: 16pt;
+    border-style: dashed !important;
+    border-color: white !important;
+    border-width: 0.1px !important;
+  }
+  .collapseGroup {
+    /* color: #2d3748; */
+    /* filter: drop-shadow(0px 5px 25px #b6cdcd); */
+    color: white !important;
+    filter: drop-shadow(0px 0px 0px #b6cdcd) !important;
+  }
+
+  .title {
+    /* color: #2d3748; */
+    color: white !important;
+  }
+
+  .aboutSectionDiv {
+    border-style: dashed;
+    border-color: white;
+    border-width: 0.1px;
+  }
+
+  /* Element | http://localhost:8000/about/ */
+}
+
+@media screen and (max-width: 915px) {
+  .about .AboutSubHero {
+    padding: 120px 90px 20px 90px;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .about .AboutSubHero {
+    padding: 120px 30px 20px 30px;
+    max-width: 100% !important;
+  }
+
+  .about .AboutSubHero > .container > .aboutSection {
+    grid-template-columns: auto;
+    max-width: 100%;
+    grid-row-gap: 15px;
+  }
+
+  .about .AboutSubHero > .container > .resumeContainer {
+    display: inline-grid;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* a5603219-9e1f-0e48-95e4-8ebc79944e72 | blob:http://localhost:8000/a5603219-9e1f-0e48-95e4-8ebc79944e72 */
+
+  .about .AboutSubHero {
+    /* padding: 120px 30px 0 30px; */
+    padding: 120px 10px 20px 10px;
+  }
+
+  /* Element | http://localhost:8000/about/ */
+
+  .rightContainer {
+    /* max-width: 100%; */
+    max-width: 80vw;
+  }
+
+  /* Element | http://localhost:8000/about/ */
+
+  /* Element | http://localhost:8000/about/ */
+
+  .aboutSection {
+    justify-items: center;
+  }
+
+  /* 5b26f8b2-77df-9c4f-a65e-aac43a06e914 | blob:http://localhost:8000/5b26f8b2-77df-9c4f-a65e-aac43a06e914 */
+
+  .aboutSectionDiv {
+    /* grid-template-columns: 70% 30%; */
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .aboutSectionDiv > .sectionImage {
+    /* justify-self: end; */
+    justify-self: center !important;
+  }
+}

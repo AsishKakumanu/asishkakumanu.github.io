@@ -27,7 +27,6 @@ const SecondPage = () => (
             />
           ))}
         </div>
-
         <br />
       </div>
     </div>

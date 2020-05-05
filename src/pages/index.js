@@ -50,7 +50,6 @@ export class IndexPage extends React.Component {
 
   componentDidMount() {
     this.changeDarkModeIcon();
-    console.log(ComponentDarkMode);
   }
 
   render() {

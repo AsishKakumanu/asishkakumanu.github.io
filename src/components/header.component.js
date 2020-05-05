@@ -44,6 +44,9 @@ export default class header extends React.Component {
           <Link to="/contact/" className="contact" id="underline">
             Contact
           </Link>
+          <Link to="/about/" className="about" id="underline">
+            About
+          </Link>
         </div>
       </header>
     );
