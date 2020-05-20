@@ -76,7 +76,7 @@ export class IndexPage extends React.Component {
               I'm a 26 year old{" "}
               <span className="underline font300">
                 <Typed
-                  strings={["Software", "Front-end", "Software, Front-end"]}
+                  strings={["Front-end", "Full-Stack", "Software"]}
                   typeSpeed={80}
                   cursorChar=" "
                 />
