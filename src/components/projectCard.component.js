@@ -1,8 +1,11 @@
 import React from "react";
+import ReactModal from "react-modal"
 
 import "../styles/projectCard.scss";
 
 export default class projectCard extends React.Component {
+  
+
   render() {
     return (
       <a

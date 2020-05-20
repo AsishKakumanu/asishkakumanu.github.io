@@ -4,15 +4,7 @@ import SEO from "../components/seo";
 import Header from "../components/header.component";
 import AboutSection from "../components/aboutMe.component";
 
-import {
-  Display,
-  Image,
-  Code,
-  Button,
-  Tooltip,
-  Spacer,
-  Collapse,
-} from "@zeit-ui/react";
+import { Display, Image, Button, Tooltip, Collapse } from "@zeit-ui/react";
 
 // Asset Imports
 import resume from "../images/resume.png";
@@ -69,7 +61,7 @@ const AboutPage = () => (
               }
             >
               <a
-                href="https://buffalo.box.com/s/wkmc3tswipq817enn8iglill2nlgfbb9"
+                href="https://buffalo.box.com/s/o526dbqtolu813hay9yct76m805kapdd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="Download"
