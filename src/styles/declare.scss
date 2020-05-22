@@ -1,8 +1,8 @@
 $NameColor: #2d3748;
 
 @mixin hoverEffect {
-  transform: scale(1.02);
-  transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+  transform: scale(1.08);
+  transition: all 0.3s ease-out;
 }
 
 @mixin font200 {

@@ -20,9 +20,23 @@ export class ContactPage extends React.Component {
                 <p className="contactPara fontWeight350">
                   Here are all the ways you can connect to me or follow my work.
                   I'm mostly active in Linkedin{" "}
-                  <span className="darkmode-ignore" role="img" aria-label=":suitcase:">💼</span>{" "}
+                  <span
+                    className="darkmode-ignore"
+                    role="img"
+                    aria-label=":suitcase:"
+                  >
+                    💼
+                  </span>{" "}
                   <span style={{ fontWeight: `200`, fontSize: `20px` }}>&</span>{" "}
-                  Instagram <span className="darkmode-ignore" role="img" aria-label=":camera:">📸</span>.
+                  Instagram{" "}
+                  <span
+                    className="darkmode-ignore"
+                    role="img"
+                    aria-label=":camera:"
+                  >
+                    📸
+                  </span>
+                  .
                 </p>
                 <div className="linkContainer">
                   <AnchorTag
@@ -75,7 +89,13 @@ export class ContactPage extends React.Component {
               <div className="contactInfo darkmode-ignore">
                 <h3 className="header">
                   <span className="underline">Let's Discuss!</span>{" "}
-                  <span className="darkmode-ignore" role="img" aria-label=":nerd:">🤓</span>
+                  <span
+                    className="darkmode-ignore"
+                    role="img"
+                    aria-label=":nerd:"
+                  >
+                    🤓
+                  </span>
                 </h3>
                 <form
                   action="https://getform.io/f/f4b3a745-10da-416a-90cc-f2c7cc5c7560"
@@ -143,7 +163,7 @@ export class ContactPage extends React.Component {
                         href: " mailto:asishkakumanu@gmail.com",
                       }}
                     ></AnchorTag> */}
-                    <button className="mailButton" ype="submit">
+                    <button className="mailButton" type="submit">
                       {" "}
                       Send
                     </button>

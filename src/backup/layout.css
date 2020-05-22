@@ -11,7 +11,7 @@ html {
 
 /* Anchor Styles  */
 html a:hover {
-  transform: scale(1.02);
+  transform: scale(1.08);
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2);
 }
 
@@ -27,8 +27,8 @@ a.button {
   padding-right: 1rem;
   margin: 0.5rem;
   text-decoration: none;
+  transition: all 0.3s ease-out;
 }
-
 
 a.button > p {
   font-weight: 500;

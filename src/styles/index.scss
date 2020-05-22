@@ -29,6 +29,7 @@ a {
     padding-right: 1rem;
     margin: 0.5rem 7px;
     text-decoration: none;
+    transition: all 0.3s ease-out;
     & > p {
       font-weight: 500;
       & > span {
