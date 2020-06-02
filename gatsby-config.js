@@ -20,31 +20,31 @@ module.exports = {
     // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: "gatsby-source-apiserver",
-      options: {
-        url:
-          "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=asishkakumanu&api_key=c381bcb2ced52d2f323ff0887021ac4b&format=json",
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // Request body
-        data: {},
-        // Name of the data to be downloaded.  Will show in graphQL or be saved to a file
-        // using this name. i.e. posts.json
-        name: `posts`,
-        // Optionally save the JSON data to a file locally
-        // Default is false
-        localSave: false,
-        // Optionally re-source data when it changes and
-        // `gatsby develop` is running.
-        // Requires `ENABLE_GATSBY_REFRESH_ENDPOINT=true`.
-        // See https://www.gatsbyjs.org/docs/environment-variables/#reserved-environment-variables
-        // Default is false
-        enableDevRefresh: true,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-apiserver",
+    //   options: {
+    //     url:
+    //       "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=asishkakumanu&api_key=c381bcb2ced52d2f323ff0887021ac4b&format=json",
+    //     method: "post",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     // Request body
+    //     data: {},
+    //     // Name of the data to be downloaded.  Will show in graphQL or be saved to a file
+    //     // using this name. i.e. posts.json
+    //     name: `posts`,
+    //     // Optionally save the JSON data to a file locally
+    //     // Default is false
+    //     localSave: false,
+    //     // Optionally re-source data when it changes and
+    //     // `gatsby develop` is running.
+    //     // Requires `ENABLE_GATSBY_REFRESH_ENDPOINT=true`.
+    //     // See https://www.gatsbyjs.org/docs/environment-variables/#reserved-environment-variables
+    //     // Default is false
+    //     enableDevRefresh: true,
+    //   },
+    // },
     {
       resolve: "gatsby-source-lastfm",
       options: {
