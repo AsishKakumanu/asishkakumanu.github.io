@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -26,6 +27,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const image = `https://github.com/AsishKakumanu/asishkakumanu.github.io/blob/develop/src/images/webview.png`  || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -41,7 +43,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `Asish Kakumanu | ${title}`,
         },
         {
           property: `og:description`,
@@ -50,6 +52,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           name: `twitter:card`,
