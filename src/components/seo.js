@@ -75,6 +75,11 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+
+        {
+          name: `twitter:image`,
+          content: `https://github.com/AsishKakumanu/asishkakumanu.github.io/blob/develop/src/images/webview.png`,
+        },
       ].concat(meta)}
     />
   );
