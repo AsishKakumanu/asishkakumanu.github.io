@@ -1,13 +1,12 @@
 import React from "react";
 // import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
+import Typed from "react-typed";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
 import AnchorTag from "../components/anchor.component";
 import HeaderTag from "../components/header.component";
-import Typed from "react-typed";
 import ComponentDarkMode from "../components/componentDarkMode";
 
 // import Image from "../components/image"
@@ -89,6 +88,7 @@ export class IndexPage extends React.Component {
               By day, I'm a Research Intern at SUNY Buffalo, by night I work on
               personal projects.{" "}
             </p>
+
             <div className="anchorDiv">
               <AnchorTag
                 options={{

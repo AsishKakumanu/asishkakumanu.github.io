@@ -1,35 +1,25 @@
-import React from "react"
-require("es6-promise").polyfill()
-require("isomorphic-fetch")
+import React, { useState, useEffect } from "react";
 
-export default class LastFm extends React.Component {
-  state = { songs: [] }
+const Lastfm = () => {
+  // Client-side Runtime Data Fetching
+  const [starsCount, setStarsCount] = useState(0);
+  useEffect(() => {
+    // get data from GitHub api
+    fetch(``, {
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Headers": "ws.audioscrobbler.com",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json()) // parse JSON from request
+      .then((resultData) => {
+        setStarsCount(resultData.recenttracks.track[0].name);
+      }); // set data for the number of stars
+  }, []);
 
-  componentWillUpdate() {
-    this.fetchData()
-  }
+  return <p>{starsCount}</p>;
+};
 
-  fetchData() {
-    fetch(
-      "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=asishkakumanu&api_key=c381bcb2ced52d2f323ff0887021ac4b&format=json"
-    )
-      .then(res => res.json())
-      .then(data => {
-        this.setState({ songs: data.recenttracks })
-      })
-      .catch(console.log)
-  }
-
-  render() {
-    const song = this.state.songs.track
-    // const trackObj = song["track"]
-
-    // const album = JSON.stringify(this.state.songs.track[0].name)
-    return (
-      <div className="functionLastFm">
-        {" "}
-        Last Played {JSON.stringify(song[0].name)}{" "}
-      </div>
-    )
-  }
-}
+export default Lastfm;
