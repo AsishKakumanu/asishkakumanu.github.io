@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import Header from "../components/header.component";
 import ProjectCard from "../components/projectCard.component";
 
-import projectData from "../projects.json";
+import projectData from "../data/projects.json";
 
 class SecondPage extends React.Component {
   render() {

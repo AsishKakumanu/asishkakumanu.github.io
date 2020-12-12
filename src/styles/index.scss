@@ -12,6 +12,12 @@ body {
   }
 }
 
+div {
+  &.ignore-fontSize {
+    font-size: initial;
+  }
+}
+
 a {
   &:hover {
     @include hoverEffect();
@@ -311,6 +317,23 @@ header {
   & > .headerGroup {
     padding: 5px 0px;
   }
+}
+
+.ModalTitle {
+  justify-content: flex-start !important;
+  font-size: 1.2rem !important;
+}
+
+.ModalSubtitle {
+  justify-content: flex-start !important;
+  text-transform: capitalize !important;
+}
+.ModalContent {
+  font-size: 0.8rem !important;
+}
+
+.ButtonHyperLink {
+  color: $NameColor;
 }
 
 @supports (backdrop-filter: blur(10px)) {

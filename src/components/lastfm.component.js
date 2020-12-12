@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import equalizer from "../images/equalizer-crop.gif";
 
 const Lastfm = () => {
+  const API_KEY = process.env.GATSBY_API_KEY;
+  const username = process.env.GATSBY_username;
+  const baseUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${API_KEY}&format=json`;
+  const [songName, setSongName] = useState("");
+  const [songUrl, setSongUrl] = useState("");
+
   // Client-side Runtime Data Fetching
-  const [starsCount, setStarsCount] = useState(0);
   useEffect(() => {
-    // get data from GitHub api
-    fetch(``, {
+    fetch(baseUrl, {
       mode: "cors",
       headers: {
         "Access-Control-Allow-Headers": "ws.audioscrobbler.com",
@@ -15,11 +20,21 @@ const Lastfm = () => {
     })
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
-        setStarsCount(resultData.recenttracks.track[0].name);
-      }); // set data for the number of stars
+        setSongName(resultData.recenttracks.track[0].name);
+        setSongUrl(resultData.recenttracks.track[0].url);
+      });
   }, []);
 
-  return <p>{starsCount}</p>;
+  return (
+    <p className="lastfm">
+      <span className="eq">
+        <img src={equalizer} alt="Equalizer Icon"></img>
+      </span>
+      <a href={songUrl} target="_blank" rel="noopener noreferrer">
+        Last Played `{songName}`
+      </a>
+    </p>
+  );
 };
 
 export default Lastfm;

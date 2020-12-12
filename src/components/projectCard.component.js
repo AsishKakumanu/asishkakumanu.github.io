@@ -1,22 +1,29 @@
+// Imports
 import React from "react";
+import { Link2 } from "@zeit-ui/react-icons";
 
+// CSS
 import "../styles/projectCard.scss";
 
-export default class projectCard extends React.Component {
-  render() {
-    return (
-      <a
-        href={this.props.url}
-        className={`projectCard ignore-fontSize `}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {/* <img className="cardBg" src={require("../images/Planes-min.png")} /> */}
-        <div className="projectCardInnerDiv">
-          <div className="projectTitle">{this.props.title}</div>
-          <div className="projectDesc ">{this.props.description}</div>
+function ProjectCard(props) {
+  return (
+    <div className={`projectCard ignore-fontSize`}>
+      <div className="projectCardInnerDiv">
+        <div className="projectTitle">{props.title}</div>
+        <div className="projectDesc">
+          <div>{props.description}</div>
+          <a
+            href={props.url}
+            className={`ButtonHyperLink ignore-fontSize`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Link2 />
+          </a>
         </div>
-      </a>
-    );
-  }
+      </div>
+    </div>
+  );
 }
+
+export default ProjectCard;

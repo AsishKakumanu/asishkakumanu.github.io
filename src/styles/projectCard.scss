@@ -1,5 +1,7 @@
 @import "./declare.scss";
 
+
+
 .projectCard {
   width: auto;
   height: auto;
@@ -18,12 +20,18 @@
 
   & > .projectCardInnerDiv {
     display: grid;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 1fr minmax(70px, 1fr);
 
     & > .projectDesc {
       @include font400;
+      display: flex;
+      justify-content: space-between;
       color: #a0a4ac;
       align-self: end;
+
+      & > a {
+        color: $NameColor;
+      }
     }
   }
 
