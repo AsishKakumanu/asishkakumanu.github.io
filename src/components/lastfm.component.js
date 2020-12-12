@@ -20,6 +20,9 @@ const Lastfm = () => {
       .then((resultData) => {
         setSongName(resultData.recenttracks.track[0].name);
         setSongUrl(resultData.recenttracks.track[0].url);
+      })
+      .catch(() => {
+        console.log("Error caught in Lastfm Component");
       });
   }, []);
 
@@ -29,7 +32,7 @@ const Lastfm = () => {
         <img src={equalizer} alt="Equalizer Icon"></img>
       </span>
       <a href={songUrl} target="_blank" rel="noopener noreferrer">
-        Last Played `{songName}`
+        {songName ? `Last Played "${songName}"` : "⚠️"}
       </a>
     </p>
   );
