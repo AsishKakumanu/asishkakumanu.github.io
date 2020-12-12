@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { Link } from "gatsby";
 import Typed from "react-typed";
 
@@ -11,29 +11,27 @@ import Lastfm from "../components/lastfm.component";
 
 // import Image from "../components/image"
 
-function changeDarkModeIcon() {
-  var el = document.querySelector(".darkmode-toggle");
-  var darkel = document.querySelector(".darkmode-toggle--white");
-
-  if (darkel) {
-    document.querySelector(".darkmode-toggle").innerText = "🌙";
-  } else {
-    document.querySelector(".darkmode-toggle").innerText = "☀️";
-  }
-
-  el.addEventListener("click", (event) => {
+function IndexPage() {
+  useEffect(() => {
+    var el = document.querySelector(".darkmode-toggle");
     var darkel = document.querySelector(".darkmode-toggle--white");
-    // clicked = !clicked;
+
     if (darkel) {
       document.querySelector(".darkmode-toggle").innerText = "🌙";
     } else {
       document.querySelector(".darkmode-toggle").innerText = "☀️";
     }
-  });
-}
 
-function IndexPage() {
-  changeDarkModeIcon();
+    el.addEventListener("click", (event) => {
+      var darkel = document.querySelector(".darkmode-toggle--white");
+      // clicked = !clicked;
+      if (darkel) {
+        document.querySelector(".darkmode-toggle").innerText = "🌙";
+      } else {
+        document.querySelector(".darkmode-toggle").innerText = "☀️";
+      }
+    });
+  });
 
   return (
     <Layout>
