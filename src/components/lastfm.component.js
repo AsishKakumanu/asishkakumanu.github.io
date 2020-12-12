@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import equalizer from "../images/equalizer-crop.gif";
 
 const Lastfm = () => {
-  const API_KEY = process.env.GATSBY_API_KEY;
-  const username = process.env.GATSBY_username;
-  const baseUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${API_KEY}&format=json`;
+  const baseUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${process.env.GATSBY_username}&api_key=${process.env.GATSBY_API_KEY}&format=json`;
   const [songName, setSongName] = useState("");
   const [songUrl, setSongUrl] = useState("");
 
