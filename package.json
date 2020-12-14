@@ -54,7 +54,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "refresh": "curl -X POST http://localhost:3000/__refresh"
   },
   "repository": {
     "type": "git",

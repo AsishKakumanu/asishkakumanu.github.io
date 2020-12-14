@@ -69,7 +69,6 @@ function IndexPage() {
             By day, I'm a Research Intern at SUNY Buffalo, by night I work on
             personal projects.{" "}
           </p>
-
           <div className="anchorDiv">
             <AnchorTag
               options={{
