@@ -10,7 +10,7 @@ exports.handler = async function(event, context) {
     headers: {
       "Accept": "application/json",
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "ws.audioscrobbler.com",
+    //   "Access-Control-Allow-Headers": "ws.audioscrobbler.com",
     },
   })
     .then((response) => response.json())
