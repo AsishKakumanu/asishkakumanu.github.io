@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import equalizer from "../images/equalizer-crop.gif";
 
-var myHeaders = new Headers();
-myHeaders.append("Origin", "");
-myHeaders.append("X-Requested-With", "");
-
 var requestOptions = {
   method: "GET",
-  headers: myHeaders,
+  headers: {
+    Origin: "",
+    "X-Requested-With": "",
+  },
   redirect: "follow",
 };
 
