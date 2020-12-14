@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import equalizer from "../images/equalizer-crop.gif";
 
 const Lastfm = () => {
-  const baseUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${process.env.GATSBY_username}&api_key=${process.env.GATSBY_API_KEY}&format=json`;
+  const baseUrl = `https://asishkakumanu.netlify.app/.netlify/functions/getRecentTrack
+`;
   const [songName, setSongName] = useState("");
   const [songUrl, setSongUrl] = useState("");
 
@@ -18,8 +19,8 @@ const Lastfm = () => {
     })
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
-        setSongName(resultData.recenttracks.track[0].name);
-        setSongUrl(resultData.recenttracks.track[0].url);
+        setSongName(resultData.result.recenttracks.track[0].name);
+        setSongUrl(resultData.result.recenttracks.track[0].url);
       })
       .catch(() => {
         console.log("Error caught in Lastfm Component");
