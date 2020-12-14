@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from "react";
 import equalizer from "../images/equalizer-crop.gif";
 
+var myHeaders = new Headers();
+myHeaders.append("Origin", "");
+myHeaders.append("X-Requested-With", "");
+
+var requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  redirect: "follow",
+};
+
 const Lastfm = () => {
-  const baseUrl = `https://asishkakumanu.netlify.app/.netlify/functions/getRecentTrack
+  const baseUrl = `https://cors-anywhere.herokuapp.com/https://asishkakumanu.netlify.app/.netlify/functions/getRecentTrack
 `;
   const [songName, setSongName] = useState("");
   const [songUrl, setSongUrl] = useState("");
 
   // Client-side Runtime Data Fetching
   useEffect(() => {
-    fetch(baseUrl, {
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Headers":
-          "Origin, X-Requested-With, Content-Type, Accept, *",
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Methods": "*",
-        "Access-Control-Max-Age": "2592000",
-        "Access-Control-Allow-Credentials": "true",
-      },
-    })
+    fetch(baseUrl, requestOptions)
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
         setSongName(resultData.result.recenttracks.track[0].name);
