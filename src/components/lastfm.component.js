@@ -17,11 +17,12 @@ const Lastfm = () => {
     })
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
+        console.log(resultData);
         setSongName(resultData.result.recenttracks.track[0].name);
         setSongUrl(resultData.result.recenttracks.track[0].url);
       })
-      .catch(() => {
-        console.log("Error caught in Lastfm Component");
+      .catch((error) => {
+        console.log("Error caught in Lastfm Component", error);
       });
   }, []);
 
