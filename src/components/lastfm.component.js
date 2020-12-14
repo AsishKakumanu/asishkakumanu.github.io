@@ -12,17 +12,22 @@ const Lastfm = () => {
     fetch(baseUrl, {
       mode: "no-cors",
       headers: {
+        "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept, *",
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Max-Age": "2592000",
+        "Access-Control-Allow-Credentials": "true",
       },
     })
       .then((response) => response.json()) // parse JSON from request
       .then((resultData) => {
-        console.log(resultData);
         setSongName(resultData.result.recenttracks.track[0].name);
         setSongUrl(resultData.result.recenttracks.track[0].url);
       })
-      .catch((error) => {
-        console.log("Error caught in Lastfm Component", error);
+      .catch((e) => {
+        console.log("Error caught in Lastfm Component", e);
       });
   }, []);
 
