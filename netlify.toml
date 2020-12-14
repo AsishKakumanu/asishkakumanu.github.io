@@ -1,9 +1,0 @@
-
-
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "https://asishkakumanu.github.io/, https://localhost:3000"
-    Access-Control-Allow-Headers: "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
-    Access-Control-Allow-Methods: "POST, GET, OPTIONS, DELETE, PUT"
