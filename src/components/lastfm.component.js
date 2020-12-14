@@ -10,11 +10,15 @@ const Lastfm = () => {
   // Client-side Runtime Data Fetching
   useEffect(() => {
     fetch(baseUrl, {
-      mode: "cors",
+      // mode: "no-cors",
       headers: {
-        "Access-Control-Allow-Headers": "ws.audioscrobbler.com",
+        "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept, *",
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Max-Age": "2592000",
+        "Access-Control-Allow-Credentials": "true",
       },
     })
       .then((response) => response.json()) // parse JSON from request
