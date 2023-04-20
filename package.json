@@ -19,7 +19,7 @@
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-sass": "^2.3.3",
-    "gatsby-plugin-sharp": "^2.6.10",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-source-apiserver": "^2.1.6",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-source-lastfm": "^0.1.2",
