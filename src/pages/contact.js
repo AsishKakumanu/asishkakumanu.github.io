@@ -76,14 +76,6 @@ export class ContactPage extends React.Component {
                       target: "_blank",
                     }}
                   ></AnchorTag>
-                  <AnchorTag
-                    options={{
-                      username: "AK",
-                      class: "whatsapp",
-                      href: " https://wa.me/17164956462",
-                      target: "_blank",
-                    }}
-                  ></AnchorTag>
                 </div>
               </div>
               <div className="contactInfo darkmode-ignore">
