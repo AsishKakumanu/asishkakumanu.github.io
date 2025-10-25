@@ -1,68 +1,49 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "asish-kakumanu-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Personal portfolio website for Asish Kakumanu",
   "author": "Asish Kakumanu <kkmnasish84@gmail.com>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,scss,css}\""
+  },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^3.2.0",
-    "@zeit-ui/react": "^1.6.2",
-    "@zeit-ui/react-icons": "^1.2.2",
-    "darkmode-js": "^1.5.5",
-    "es6-promise": "^4.2.8",
-    "gatsby": "^2.23.1",
-    "gatsby-cli": "^2.12.44",
-    "gatsby-image": "^2.4.6",
-    "gatsby-plugin-force-file-loader": "^0.1.0",
-    "gatsby-plugin-google-gtag": "^2.1.3",
-    "gatsby-plugin-manifest": "^2.4.10",
-    "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.3.3",
-    "gatsby-plugin-sass": "^2.3.3",
-    "gatsby-plugin-sharp": "^2.6.10",
-    "gatsby-source-apiserver": "^2.1.6",
-    "gatsby-source-filesystem": "^2.3.10",
-    "gatsby-source-lastfm": "^0.1.2",
-    "gatsby-transformer-sharp": "^2.5.4",
-    "isomorphic-fetch": "^2.2.1",
-    "jquery": "^3.5.1",
-    "node": "^15.4.0",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-autosize-textarea": "^7.0.0",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.10.0",
-    "react-inlinesvg": "^1.2.0",
-    "react-lottie": "^1.2.3",
-    "react-modal": "^3.11.2",
-    "react-typed": "^1.2.0",
-    "sharp": "^0.32.6"
+    "jotai": "^2.10.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.4.0",
+    "react-modal": "^3.16.1",
+    "react-typed": "^2.0.12",
+    "simple-icons": "^14.6.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "gatsby build && gh-pages -d public -b master",
-    "refresh": "curl -X POST http://localhost:3000/__refresh"
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7",
+    "vite-plugin-pwa": "^0.21.1",
+    "sass": "^1.83.4",
+    "gh-pages": "^6.2.0",
+    "prettier": "^3.4.2",
+    "eslint": "^9.18.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/asishkakumanu/asishkakumanu.github.io"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
