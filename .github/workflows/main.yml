@@ -49,8 +49,8 @@ jobs:
           path: ./dist
 
   deploy:
-    # Only deploy from master branch
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+    # Only deploy from develop branch
+    if: github.ref == 'refs/heads/develop'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
