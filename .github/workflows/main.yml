@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
+      - master
+      - main
       - develop
       - claude/security-and-migration-011CUKsVeKSygkrYTDZnYJwN
   workflow_dispatch:
