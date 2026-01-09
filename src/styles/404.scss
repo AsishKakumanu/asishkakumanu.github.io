@@ -5,9 +5,20 @@
   justify-content: center;
   align-items: center;
   height: 95vh;
-  // max-width: 100%;
+  background-color: var(--bg-primary);
 
   & > img {
     transform: scale(0.5);
+  }
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+  .page404 {
+    background-color: var(--bg-primary);
+
+    img {
+      filter: brightness(0.9) contrast(1.1);
+    }
   }
 }

@@ -1,7 +1,5 @@
 @import "./declare.scss";
 
-
-
 .projectCard {
   width: auto;
   height: auto;
@@ -12,10 +10,11 @@
   border-radius: 10px;
   justify-content: left;
   align-items: center;
-  box-shadow: 0px 0px 3px #8a8a8a;
+  box-shadow: 0px 0px 3px var(--card-shadow);
   text-decoration: none;
-  color: $NameColor;
+  color: var(--text-primary);
   font-weight: 600;
+  background-color: var(--bg-card);
   background-image: url("../images/tiny_grid.png");
 
   & > .projectCardInnerDiv {
@@ -26,19 +25,54 @@
       @include font400;
       display: flex;
       justify-content: space-between;
-      color: #a0a4ac;
+      color: var(--card-desc-color);
       align-self: end;
 
       & > a {
-        color: $NameColor;
+        color: var(--text-primary);
       }
     }
   }
 
   &:hover {
-    box-shadow: 0px 0px 10px #2d3748;
+    box-shadow: 0px 0px 10px var(--card-hover-shadow);
     transition: all 0.3s ease-out !important;
     transform: scale(1.02);
     cursor: pointer;
+  }
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+  .projectCard {
+    background-color: var(--bg-card);
+    background-image: none;
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      box-shadow: 0px 0px 15px var(--card-hover-shadow);
+    }
+
+    .projectDesc {
+      color: var(--card-desc-color);
+
+      a {
+        color: var(--text-secondary);
+      }
+    }
+  }
+}
+
+// Backwards compatibility
+.darkmode--activated {
+  .projectCard {
+    background-color: var(--bg-card);
+    background-image: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+
+    &:hover {
+      box-shadow: 0px 0px 15px var(--card-hover-shadow);
+    }
   }
 }
