@@ -13,11 +13,11 @@ function App() {
   const [darkMode] = useAtom(darkModeAtom)
 
   useEffect(() => {
-    // Apply dark mode class to body
+    // Apply dark mode class to body (matching original Gatsby darkmode-js behavior)
     if (darkMode) {
-      document.body.classList.add('dark-mode')
+      document.body.classList.add('darkmode--activated')
     } else {
-      document.body.classList.remove('dark-mode')
+      document.body.classList.remove('darkmode--activated')
     }
   }, [darkMode])
 
