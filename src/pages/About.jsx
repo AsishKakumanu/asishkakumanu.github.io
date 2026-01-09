@@ -22,28 +22,22 @@ import { DiJqueryLogo, DiAndroid } from 'react-icons/di'
 import { AiOutlineConsoleSql } from 'react-icons/ai'
 import { GrHadoop } from 'react-icons/gr'
 
-// Simple Collapse component replacement
+// Simple Collapse component replacement (mimicking @zeit-ui/react structure)
 const Collapse = ({ title, children, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   return (
-    <div className="collapse-container" style={{ marginBottom: '1rem' }}>
-      <div
-        className="collapse-header"
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          padding: '1rem',
-          backgroundColor: '#f5f5f5',
-          cursor: 'pointer',
-          borderRadius: '4px',
-          fontWeight: '500',
-        }}
-      >
-        {title}
+    <div className="collapse">
+      <div className="view" onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
+        <div className="title">{title}</div>
       </div>
       {isOpen && (
-        <div className="collapse-content" style={{ padding: '1rem' }}>
-          {children}
+        <div className="container">
+          <div className="content">
+            <div className="content">
+              {children}
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -65,16 +59,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="Download"
               >
-                <button className="resume darkmode-ignore" style={{
-                  padding: '8px 16px',
-                  backgroundColor: '#28a745',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                }}>
+                <button className="resume darkmode-ignore">
                   Download Resume
                 </button>
               </a>
