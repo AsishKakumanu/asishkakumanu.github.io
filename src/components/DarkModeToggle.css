@@ -1,0 +1,41 @@
+.darkmode-toggle {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 1000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkmode-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.darkmode-toggle:focus {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}
+
+.darkmode-toggle--light {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.darkmode-toggle--dark {
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+.darkmode-toggle__icon {
+  font-size: 24px;
+  line-height: 1;
+}

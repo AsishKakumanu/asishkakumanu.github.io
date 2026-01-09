@@ -1,6 +1,109 @@
+/* Theme CSS Variables */
+:root {
+  /* Light theme (default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --bg-tertiary: #e2e8f0;
+  --bg-nav: rgb(222, 236, 236);
+  --bg-card: #ffffff;
+  --bg-input: #2d3748;
+  --bg-form: #1a202c;
+
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-muted: #a0aec0;
+  --text-inverse: #ffffff;
+
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+
+  --link-hover: #d0c8b8;
+  --underline-bg: #a0aec02e;
+
+  /* LastFM widget */
+  --lastfm-bg: antiquewhite;
+  --lastfm-text: #4f4343;
+  --lastfm-shadow: #999090;
+
+  /* Project card */
+  --card-shadow: #8a8a8a;
+  --card-hover-shadow: #2d3748;
+  --card-desc-color: #a0a4ac;
+
+  /* Collapse component */
+  --collapse-bg: #ffffff;
+  --collapse-shadow: rgba(0, 0, 0, 0.12);
+  --collapse-filter: drop-shadow(0px 5px 25px #b6cdcd);
+
+  /* Buttons */
+  --btn-github-bg: #e1e5e6;
+  --btn-github-text: #24292e;
+  --btn-link-arrow-bg: #e1e5e6;
+
+  /* Contact page */
+  --links-div-bg: #ffffff;
+  --contact-header-color: #2d3748;
+
+  /* Header blur fallback */
+  --header-blur-fallback: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-tertiary: #4a5568;
+  --bg-nav: #2d3748;
+  --bg-card: #2d3748;
+  --bg-input: #4a5568;
+  --bg-form: #1a202c;
+
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+  --text-inverse: #1a202c;
+
+  --border-color: #4a5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-strong: rgba(0, 0, 0, 0.5);
+
+  --link-hover: #d0c8b8;
+  --underline-bg: rgba(160, 174, 192, 0.3);
+
+  /* LastFM widget */
+  --lastfm-bg: #2d3748;
+  --lastfm-text: #e2e8f0;
+  --lastfm-shadow: #1a202c;
+
+  /* Project card */
+  --card-shadow: #1a202c;
+  --card-hover-shadow: #63b3ed;
+  --card-desc-color: #a0aec0;
+
+  /* Collapse component */
+  --collapse-bg: #2d3748;
+  --collapse-shadow: rgba(0, 0, 0, 0.3);
+  --collapse-filter: none;
+
+  /* Buttons */
+  --btn-github-bg: #4a5568;
+  --btn-github-text: #e2e8f0;
+  --btn-link-arrow-bg: #4a5568;
+
+  /* Contact page */
+  --links-div-bg: #2d3748;
+  --contact-header-color: #e2e8f0;
+
+  /* Header blur fallback */
+  --header-blur-fallback: rgba(26, 32, 44, 0.9);
+}
+
+/* Base styles */
 html,
 body,
-#___gatsby {
+#___gatsby,
+#root {
   height: 100%;
 }
 
@@ -12,9 +115,26 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
-  height: 100%;
 }
 
 body {
   margin: 0px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme changes */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Disable transitions on page load to prevent flash */
+.no-transitions,
+.no-transitions *,
+.no-transitions *::before,
+.no-transitions *::after {
+  transition: none !important;
 }

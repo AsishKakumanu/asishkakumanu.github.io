@@ -38,7 +38,7 @@
 
         & > a {
           font-weight: 700;
-          color: $NameColor;
+          color: var(--text-primary);
         }
       }
     }
@@ -51,11 +51,10 @@
     & > .projectsDiv {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      // justify-items: center;
     }
 
     & > .Headline {
-      color: #2d3748;
+      color: var(--text-primary);
       isolation: isolate;
     }
   }
@@ -67,6 +66,20 @@
 
 .projectDesc {
   font-size: 13px !important;
+  color: var(--card-desc-color);
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+  .page2 {
+    header nav ul li a {
+      color: var(--text-primary);
+    }
+
+    .Headline {
+      color: var(--text-primary);
+    }
+  }
 }
 
 @media (max-width: 1370px) {

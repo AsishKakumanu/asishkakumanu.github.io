@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ReactTyped } from 'react-typed'
 import SEO from '@components/SEO'
 import Anchor from '@components/Anchor'
@@ -15,7 +15,7 @@ function Home() {
         <div className="SubHero">
           <h3 className="h3Intro noMarginBottom">
             Hey{' '}
-            <span className="h3IntroSpan darkmode-ignore" role="img" aria-label=":wave:">
+            <span className="h3IntroSpan emoji" role="img" aria-label=":wave:">
               👋🏻
             </span>
             ! My name is <span className="h3IntroSpan Name">Asish Kakumanu</span>
@@ -49,7 +49,7 @@ function Home() {
           <Lastfm />
         </div>
       </div>
-      <div className="HeroBack darkmode-ignore" />
+      <div className="HeroBack" />
       <DarkModeToggle />
     </>
   )
