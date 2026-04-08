@@ -39,6 +39,11 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16"
   },
+  "overrides": {
+    "workbox-build": {
+      "fs-extra": "^11.2.0"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/asishkakumanu/asishkakumanu.github.io"
