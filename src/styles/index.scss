@@ -130,11 +130,6 @@ a {
 .h3Intro {
   font-weight: 200;
   color: var(--text-muted);
-  opacity: 0;
-  animation: h3IntroAnimation;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 span.h3IntroSpan.emoji {
@@ -184,11 +179,6 @@ span.h3IntroSpan.emoji {
 .IntroPara {
   color: var(--text-primary);
   @include font200();
-  opacity: 0;
-  animation: IntroPara;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .IntroParagraph {

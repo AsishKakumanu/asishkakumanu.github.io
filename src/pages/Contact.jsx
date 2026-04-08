@@ -1,22 +1,66 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
 import Anchor from '@components/Anchor'
 import DarkModeToggle from '@components/DarkModeToggle'
+import PageTransition from '@components/PageTransition'
+
+const containerVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
+    },
+  },
+}
+
+const itemVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
+const formVariants = {
+  initial: { opacity: 0, x: 20 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
+const linkListVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.07,
+    },
+  },
+}
 
 function Contact() {
   return (
-    <>
+    <PageTransition>
       <SEO title="Contact" />
       <Header />
       <div className="Hero contactPage">
         <div className="contactSubHero">
           <div className="contactContainer">
-            <div className="linksDiv">
-              <h3 className="linkHeader">
+            <motion.div
+              className="linksDiv"
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.h3 className="linkHeader" variants={itemVariants}>
                 <span className="underline">Links</span>
-              </h3>
-              <p className="contactPara fontWeight350">
+              </motion.h3>
+              <motion.p className="contactPara fontWeight350" variants={itemVariants}>
                 Here are all the ways you can connect to me or follow my work. I'm mostly active
                 in Linkedin{' '}
                 <span className="darkmode-ignore" role="img" aria-label=":suitcase:">
@@ -27,35 +71,46 @@ function Contact() {
                   📸
                 </span>
                 .
-              </p>
-              <div className="linkContainer">
-                <Anchor
-                  options={{
-                    username: 'asishkakumanu',
-                    class: 'insta',
-                    href: 'https://www.instagram.com/asishkakumanu/',
-                    target: '_blank',
-                  }}
-                />
-                <Anchor
-                  options={{
-                    username: 'asishkakumanu',
-                    class: 'linkedin',
-                    href: 'https://www.linkedin.com/in/asishkakumanu/',
-                    target: '_blank',
-                  }}
-                />
-                <Anchor
-                  options={{
-                    username: 'AsishKakumanu',
-                    class: 'github',
-                    href: 'https://github.com/AsishKakumanu',
-                    target: '_blank',
-                  }}
-                />
-              </div>
-              <p className="contactPara fontWeight350">Wanna have a quick chat?</p>
-              <div className="linkContainer2">
+              </motion.p>
+              <motion.div
+                className="linkContainer"
+                variants={linkListVariants}
+              >
+                <motion.div variants={itemVariants}>
+                  <Anchor
+                    options={{
+                      username: 'asishkakumanu',
+                      class: 'insta',
+                      href: 'https://www.instagram.com/asishkakumanu/',
+                      target: '_blank',
+                    }}
+                  />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <Anchor
+                    options={{
+                      username: 'asishkakumanu',
+                      class: 'linkedin',
+                      href: 'https://www.linkedin.com/in/asishkakumanu/',
+                      target: '_blank',
+                    }}
+                  />
+                </motion.div>
+                <motion.div variants={itemVariants}>
+                  <Anchor
+                    options={{
+                      username: 'AsishKakumanu',
+                      class: 'github',
+                      href: 'https://github.com/AsishKakumanu',
+                      target: '_blank',
+                    }}
+                  />
+                </motion.div>
+              </motion.div>
+              <motion.p className="contactPara fontWeight350" variants={itemVariants}>
+                Wanna have a quick chat?
+              </motion.p>
+              <motion.div className="linkContainer2" variants={itemVariants}>
                 <Anchor
                   options={{
                     username: 'AsishKakumanu',
@@ -64,9 +119,14 @@ function Contact() {
                     target: '_blank',
                   }}
                 />
-              </div>
-            </div>
-            <div className="contactInfo darkmode-ignore">
+              </motion.div>
+            </motion.div>
+            <motion.div
+              className="contactInfo darkmode-ignore"
+              variants={formVariants}
+              initial="initial"
+              animate="animate"
+            >
               <h3 className="header">
                 <span className="underline">Let's Discuss!</span>{' '}
                 <span className="darkmode-ignore" role="img" aria-label=":nerd:">
@@ -126,12 +186,12 @@ function Contact() {
                   </button>
                 </div>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <DarkModeToggle />
-    </>
+    </PageTransition>
   )
 }
 

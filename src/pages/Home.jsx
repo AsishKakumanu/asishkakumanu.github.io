@@ -1,26 +1,52 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { ReactTyped } from 'react-typed'
 import SEO from '@components/SEO'
 import Anchor from '@components/Anchor'
 import Header from '@components/Header'
 import DarkModeToggle from '@components/DarkModeToggle'
 import Lastfm from '@components/Lastfm'
+import PageTransition from '@components/PageTransition'
+
+const containerVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+}
 
 function Home() {
   return (
-    <>
+    <PageTransition>
       <SEO title="Personal Website" />
       <div className="Hero index">
         <Header />
-        <div className="SubHero">
-          <h3 className="h3Intro noMarginBottom">
+        <motion.div
+          className="SubHero"
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.h3 className="h3Intro noMarginBottom" variants={itemVariants}>
             Hey{' '}
             <span className="h3IntroSpan emoji" role="img" aria-label=":wave:">
               👋🏻
             </span>
             ! My name is <span className="h3IntroSpan Name">Asish Kakumanu</span>
-          </h3>
-          <p className="IntroPara noMarginBottom font200">
+          </motion.h3>
+          <motion.p className="IntroPara noMarginBottom font200" variants={itemVariants}>
             I'm a 26 year old{' '}
             <span className="underline font300">
               <ReactTyped
@@ -32,11 +58,11 @@ function Home() {
               />
             </span>
             <span className="underline font300">Developer</span> based in Sunnyvale, California.
-          </p>
-          <p className="IntroPara font200">
+          </motion.p>
+          <motion.p className="IntroPara font200" variants={itemVariants}>
             By day, I'm a Research Intern at SUNY Buffalo, by night I work on personal projects.
-          </p>
-          <div className="anchorDiv">
+          </motion.p>
+          <motion.div className="anchorDiv" variants={itemVariants}>
             <Anchor
               options={{
                 username: 'Contact Me',
@@ -45,13 +71,13 @@ function Home() {
                 target: '_self',
               }}
             />
-          </div>
+          </motion.div>
           <Lastfm />
-        </div>
+        </motion.div>
       </div>
       <div className="HeroBack" />
       <DarkModeToggle />
-    </>
+    </PageTransition>
   )
 }
 
