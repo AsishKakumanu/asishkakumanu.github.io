@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
 import Anchor from '@components/Anchor'
-import DarkModeToggle from '@components/DarkModeToggle'
 import PageTransition from '@components/PageTransition'
 
 const containerVariants = {
@@ -190,7 +189,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <DarkModeToggle />
     </PageTransition>
   )
 }

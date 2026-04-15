@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'Asish Kakumanu - Portfolio',
         short_name: 'Asish K',
-        description: '26 year old software developer with MS in CS from SUNY Buffalo',
+        description: 'Software developer with MS in CS from SUNY Buffalo',
         theme_color: '#ffffff',
         icons: [
           {

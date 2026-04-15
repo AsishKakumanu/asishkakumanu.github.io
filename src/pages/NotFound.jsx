@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
-import DarkModeToggle from '@components/DarkModeToggle'
 import PageTransition from '@components/PageTransition'
 import _404Gif from '@images/404-1.png'
 
@@ -20,7 +19,6 @@ function NotFound() {
           transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         />
       </div>
-      <DarkModeToggle />
     </PageTransition>
   )
 }

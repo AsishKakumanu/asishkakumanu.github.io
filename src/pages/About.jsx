@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
 import AboutMe from '@components/AboutMe'
-import DarkModeToggle from '@components/DarkModeToggle'
 import PageTransition from '@components/PageTransition'
 import myPic from '@images/myPortrait2.jpeg'
 import {
@@ -132,10 +131,18 @@ function About() {
                   <Collapse title="Experience 💼" defaultOpen={true}>
                     <AboutMe
                       options={{
+                        header: 'SDE',
+                        subheader: 'Amazon',
+                        class: 'amazon',
+                        dates: 'Present',
+                      }}
+                    />
+                    <AboutMe
+                      options={{
                         header: 'Research Intern',
                         subheader: 'University at Buffalo',
                         class: 'ub',
-                        dates: 'Present',
+                        dates: '2019 - 2020',
                       }}
                     />
                     <AboutMe
@@ -210,7 +217,6 @@ function About() {
           </div>
         </div>
       </div>
-      <DarkModeToggle />
     </PageTransition>
   )
 }

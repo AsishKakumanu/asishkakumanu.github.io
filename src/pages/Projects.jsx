@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
 import ProjectCard from '@components/ProjectCard'
-import DarkModeToggle from '@components/DarkModeToggle'
 import PageTransition from '@components/PageTransition'
 import projectData from '@data/projects.json'
 
@@ -49,7 +48,6 @@ function Projects() {
           <br />
         </div>
       </div>
-      <DarkModeToggle />
     </PageTransition>
   )
 }

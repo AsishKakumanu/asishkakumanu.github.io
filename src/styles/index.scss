@@ -194,20 +194,20 @@ span.h3IntroSpan.emoji {
   z-index: 3;
 }
 
-// LastFm
-.lastfm {
+// Spotify Widget
+.spotify-widget {
   position: fixed;
   font-size: 12px;
   bottom: 5px;
   right: 0px;
   z-index: 4;
-  color: var(--lastfm-text);
-  background-color: var(--lastfm-bg);
+  color: var(--spotify-text);
+  background-color: var(--spotify-bg);
   padding: 14px;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
   box-shadow: black;
-  filter: drop-shadow(-10px 0px 20px var(--lastfm-shadow));
+  filter: drop-shadow(-10px 0px 20px var(--spotify-shadow));
   text-decoration: none;
 
   & a {
@@ -241,23 +241,23 @@ span.h3IntroSpan.emoji {
 
   & > a {
     text-decoration: none;
-    color: var(--lastfm-text);
+    color: var(--spotify-text);
 
     :visited {
-      color: var(--lastfm-text);
+      color: var(--spotify-text);
     }
   }
 }
 
-// Equalizer
-.eq {
+// Spotify Icon
+.spotify-icon {
   display: inline-table;
+  color: #1DB954;
 
-  & > img {
+  & > svg {
     display: block;
-    object-fit: contain;
-    width: 11px;
-    height: 11px;
+    width: 14px;
+    height: 14px;
     padding: 0px 5px;
   }
 }
