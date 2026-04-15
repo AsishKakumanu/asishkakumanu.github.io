@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '@components/SEO'
 import Header from '@components/Header'
 import AboutMe from '@components/AboutMe'
 import DarkModeToggle from '@components/DarkModeToggle'
-import resume from '@images/resume.png'
+import PageTransition from '@components/PageTransition'
 import myPic from '@images/myPortrait2.jpeg'
 import {
   FaHtml5,
@@ -22,37 +24,92 @@ import { DiJqueryLogo, DiAndroid } from 'react-icons/di'
 import { AiOutlineConsoleSql } from 'react-icons/ai'
 import { GrHadoop } from 'react-icons/gr'
 
-// Simple Collapse component replacement (mimicking @zeit-ui/react structure)
+const collapseGroupVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
+    },
+  },
+}
+
+const collapseItemVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
+const portraitVariants = {
+  initial: { opacity: 0, x: 20 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
+const resumeVariants = {
+  initial: { opacity: 0, y: -10 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
+// Simple Collapse component with animated open/close
 const Collapse = ({ title, children, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   return (
-    <div className="collapse">
+    <motion.div className="collapse" variants={collapseItemVariants}>
       <div className="view" onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
         <div className="title">{title}</div>
       </div>
-      {isOpen && (
-        <div className="container">
-          <div className="content">
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            className="container"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            style={{ overflow: 'hidden' }}
+          >
             <div className="content">
-              {children}
+              <div className="content">{children}</div>
             </div>
-          </div>
-        </div>
-      )}
-    </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   )
+}
+
+Collapse.propTypes = {
+  title: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  defaultOpen: PropTypes.bool,
 }
 
 function About() {
   return (
-    <>
+    <PageTransition>
       <SEO title="About" />
       <Header />
       <div className="Hero about">
         <div className="AboutSubHero">
           <div className="container">
-            <div className="resumeContainer">
+            <motion.div
+              className="resumeContainer"
+              variants={resumeVariants}
+              initial="initial"
+              animate="animate"
+            >
               <a
                 href="https://buffalo.box.com/s/o526dbqtolu813hay9yct76m805kapdd"
                 target="_blank"
@@ -63,10 +120,15 @@ function About() {
                   Download Resume
                 </button>
               </a>
-            </div>
+            </motion.div>
             <div className="aboutSection">
               <div className="leftContainer darkmode-ignore">
-                <div className="collapseGroup">
+                <motion.div
+                  className="collapseGroup"
+                  variants={collapseGroupVariants}
+                  initial="initial"
+                  animate="animate"
+                >
                   <Collapse title="Experience 💼" defaultOpen={true}>
                     <AboutMe
                       options={{
@@ -130,21 +192,26 @@ function About() {
                       <GrHadoop title="Hadoop" />
                     </div>
                   </Collapse>
-                </div>
+                </motion.div>
               </div>
-              <div className="rightContainer">
+              <motion.div
+                className="rightContainer"
+                variants={portraitVariants}
+                initial="initial"
+                animate="animate"
+              >
                 <img
                   style={{ maxWidth: '100%', maxHeight: '100%' }}
                   src={myPic}
                   alt="Asish Kakumanu"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
       <DarkModeToggle />
-    </>
+    </PageTransition>
   )
 }
 

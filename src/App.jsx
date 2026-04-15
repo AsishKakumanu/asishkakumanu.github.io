@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useAtom } from 'jotai'
+import { AnimatePresence, MotionConfig } from 'framer-motion'
 import { darkModeAtom } from './store/atoms'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -11,6 +12,7 @@ import NotFound from './pages/NotFound'
 
 function App() {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom)
+  const location = useLocation()
 
   // Apply theme immediately on mount to prevent flash
   useLayoutEffect(() => {
@@ -66,15 +68,19 @@ function App() {
   }, [setDarkMode])
 
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Layout>
+    <MotionConfig reducedMotion="user">
+      <Layout>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AnimatePresence>
+      </Layout>
+    </MotionConfig>
   )
 }
 
