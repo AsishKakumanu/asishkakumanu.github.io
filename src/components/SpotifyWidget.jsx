@@ -34,21 +34,26 @@ const SpotifyWidget = () => {
     fetchSpotifyData()
   }, [setSpotifyData, setLoading])
 
+  if (!loading && !spotifyData) return null
+
   return (
-    <p className="spotify-widget">
+    <a
+      className="spotify-widget"
+      href={spotifyData?.songUrl || '#'}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span className="spotify-icon">
         <SiSpotify />
       </span>
       {loading ? (
-        <span>Loading...</span>
-      ) : spotifyData ? (
-        <a href={spotifyData.songUrl} target="_blank" rel="noopener noreferrer">
-          Last Played "{spotifyData.songName}"
-        </a>
+        <span className="spotify-track">Loading...</span>
       ) : (
-        <span></span>
+        <span className="spotify-track">
+          Last Played "{spotifyData.songName}"
+        </span>
       )}
-    </p>
+    </a>
   )
 }
 
