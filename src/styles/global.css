@@ -21,10 +21,10 @@
   --link-hover: #d0c8b8;
   --underline-bg: #a0aec02e;
 
-  /* LastFM widget */
-  --lastfm-bg: antiquewhite;
-  --lastfm-text: #4f4343;
-  --lastfm-shadow: #999090;
+  /* Spotify widget */
+  --spotify-bg: antiquewhite;
+  --spotify-text: #4f4343;
+  --spotify-shadow: #999090;
 
   /* Project card */
   --card-shadow: #8a8a8a;
@@ -71,10 +71,10 @@
   --link-hover: #d0c8b8;
   --underline-bg: rgba(160, 174, 192, 0.3);
 
-  /* LastFM widget */
-  --lastfm-bg: #2d3748;
-  --lastfm-text: #e2e8f0;
-  --lastfm-shadow: #1a202c;
+  /* Spotify widget */
+  --spotify-bg: #2d3748;
+  --spotify-text: #e2e8f0;
+  --spotify-shadow: #1a202c;
 
   /* Project card */
   --card-shadow: #1a202c;

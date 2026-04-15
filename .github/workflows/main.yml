@@ -39,9 +39,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          GATSBY_username: ${{ secrets.GATSBY_username }}
-          GATSBY_API_KEY: ${{ secrets.GATSBY_API_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

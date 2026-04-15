@@ -2,9 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import PropTypes from 'prop-types'
 
+const age = new Date().getFullYear() - 1994
+
 const siteMetadata = {
   title: 'Asish Kakumanu',
-  description: '26 year old software developer with MS in CS from SUNY Buffalo',
+  description: `${age} year old software developer with MS in CS from SUNY Buffalo`,
   author: '@asishkakumanu',
   image: 'https://github.com/AsishKakumanu/asishkakumanu.github.io/blob/develop/src/images/webview.png'
 }

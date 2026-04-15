@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FaAmazon } from 'react-icons/fa'
 import '@styles/aboutMe.scss'
 import scb from '@images/scb.png'
 import ub from '@images/ub.png'
@@ -9,6 +10,8 @@ import srm from '@images/srm.png'
 const AboutMe = ({ options }) => {
   const getImage = () => {
     switch (options.class) {
+      case 'amazon':
+        return <FaAmazon size={60} title="Amazon" />
       case 'scb':
         return <img src={scb} alt="scb" height="100%" width="100px" />
       case 'ub':

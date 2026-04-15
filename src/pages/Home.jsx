@@ -4,8 +4,6 @@ import { ReactTyped } from 'react-typed'
 import SEO from '@components/SEO'
 import Anchor from '@components/Anchor'
 import Header from '@components/Header'
-import DarkModeToggle from '@components/DarkModeToggle'
-import Lastfm from '@components/Lastfm'
 import PageTransition from '@components/PageTransition'
 
 const containerVariants = {
@@ -28,6 +26,8 @@ const itemVariants = {
 }
 
 function Home() {
+  const age = new Date().getFullYear() - 1994
+
   return (
     <PageTransition>
       <SEO title="Personal Website" />
@@ -47,7 +47,7 @@ function Home() {
             ! My name is <span className="h3IntroSpan Name">Asish Kakumanu</span>
           </motion.h3>
           <motion.p className="IntroPara noMarginBottom font200" variants={itemVariants}>
-            I'm a 26 year old{' '}
+            I'm a {age} year old{' '}
             <span className="underline font300">
               <ReactTyped
                 strings={['Front-end', 'Full-Stack', 'Software']}
@@ -60,7 +60,7 @@ function Home() {
             <span className="underline font300">Developer</span> based in Sunnyvale, California.
           </motion.p>
           <motion.p className="IntroPara font200" variants={itemVariants}>
-            By day, I'm a Research Intern at SUNY Buffalo, by night I work on personal projects.
+            By day, I'm an SDE at Amazon, by night I work on personal projects.
           </motion.p>
           <motion.div className="anchorDiv" variants={itemVariants}>
             <Anchor
@@ -72,11 +72,9 @@ function Home() {
               }}
             />
           </motion.div>
-          <Lastfm />
         </motion.div>
       </div>
       <div className="HeroBack" />
-      <DarkModeToggle />
     </PageTransition>
   )
 }
