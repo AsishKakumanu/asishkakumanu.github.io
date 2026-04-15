@@ -7,25 +7,6 @@ import DarkModeToggle from '@components/DarkModeToggle'
 import PageTransition from '@components/PageTransition'
 import projectData from '@data/projects.json'
 
-const gridVariants = {
-  initial: {},
-  animate: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.15,
-    },
-  },
-}
-
-const cardVariants = {
-  initial: { opacity: 0, y: 24 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-  },
-}
-
 const headlineVariants = {
   initial: { opacity: 0, y: -10 },
   animate: {
@@ -52,18 +33,17 @@ function Projects() {
           </motion.h3>
           <motion.div
             className="projectsDiv"
-            variants={gridVariants}
-            initial="initial"
-            animate="animate"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
             {projectData.cells.map((cell) => (
-              <motion.div key={cell.title} variants={cardVariants}>
-                <ProjectCard
-                  title={cell.title}
-                  description={cell.description}
-                  url={cell.url}
-                />
-              </motion.div>
+              <ProjectCard
+                key={cell.title}
+                title={cell.title}
+                description={cell.description}
+                url={cell.url}
+              />
             ))}
           </motion.div>
           <br />
