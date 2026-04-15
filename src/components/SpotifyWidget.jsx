@@ -33,8 +33,11 @@ const SpotifyWidget = () => {
 
   return (
     <div className="spotify-widget">
-      <div className="spotify-panel">
-        <div className="spotify-panel-header">Recently Played</div>
+      <div className="spotify-header">
+        <SiSpotify className="spotify-logo" />
+        <span className="spotify-header-text">Recently Played</span>
+      </div>
+      <div className="spotify-content">
         {latestTrack && (
           <div className="spotify-embed">
             <iframe
@@ -67,9 +70,6 @@ const SpotifyWidget = () => {
             ))}
           </div>
         )}
-      </div>
-      <div className="spotify-pill">
-        <SiSpotify />
       </div>
     </div>
   )
