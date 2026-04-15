@@ -1,57 +1,77 @@
-import React, { useEffect } from 'react'
-import { useAtom } from 'jotai'
-import { spotifyDataAtom, spotifyLoadingAtom } from '@/store/atoms'
+import React, { useEffect, useState } from 'react'
 import { SiSpotify } from 'react-icons/si'
 
 const SpotifyWidget = () => {
-  const [spotifyData, setSpotifyData] = useAtom(spotifyDataAtom)
-  const [loading, setLoading] = useAtom(spotifyLoadingAtom)
+  const [tracks, setTracks] = useState([])
 
   useEffect(() => {
-    const fetchSpotifyData = async () => {
-      setLoading(true)
+    const fetchRecentTracks = async () => {
       try {
-        const baseUrl = 'https://asishkakumanu.netlify.app/.netlify/functions/getSpotifyRecentTrack'
-        const response = await fetch(baseUrl)
+        const response = await fetch(
+          'https://asishkakumanu.netlify.app/.netlify/functions/getSpotifyRecentTrack'
+        )
         const data = await response.json()
-
-        if (data?.result?.items?.[0]) {
-          const item = data.result.items[0]
-          setSpotifyData({
-            songName: item.track.name,
-            artist: item.track.artists.map(a => a.name).join(', '),
-            songUrl: item.track.external_urls.spotify,
-          })
+        if (data?.result?.items) {
+          setTracks(
+            data.result.items.map((item) => ({
+              id: item.track.id,
+              name: item.track.name,
+              artist: item.track.artists.map((a) => a.name).join(', '),
+              url: item.track.external_urls.spotify,
+              albumArt: item.track.album.images[item.track.album.images.length - 1]?.url,
+            }))
+          )
         }
       } catch (error) {
         console.error('Error fetching Spotify data:', error)
-        setSpotifyData(null)
-      } finally {
-        setLoading(false)
       }
     }
+    fetchRecentTracks()
+  }, [])
 
-    fetchSpotifyData()
-  }, [setSpotifyData, setLoading])
-
-  const href = spotifyData?.songUrl || 'https://open.spotify.com'
+  const latestTrack = tracks[0]
 
   return (
-    <a
-      className="spotify-widget"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span className="spotify-icon">
-        <SiSpotify />
-      </span>
-      {spotifyData && (
-        <span className="spotify-track">
-          Last Played "{spotifyData.songName}"
-        </span>
-      )}
-    </a>
+    <div className="spotify-widget">
+      <div className="spotify-header">
+        <SiSpotify className="spotify-logo" />
+        <span className="spotify-header-text">Recently Played</span>
+      </div>
+      <div className="spotify-content">
+        {latestTrack && (
+          <div className="spotify-embed">
+            <iframe
+              src={`https://open.spotify.com/embed/track/${latestTrack.id}?utm_source=generator&theme=0`}
+              width="100%"
+              height="80"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Spotify Player"
+            />
+          </div>
+        )}
+        {tracks.length > 1 && (
+          <div className="spotify-track-list">
+            {tracks.slice(1).map((track, i) => (
+              <a
+                key={`${track.id}-${i}`}
+                href={track.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spotify-track-item"
+              >
+                <img src={track.albumArt} alt="" className="spotify-track-art" />
+                <div className="spotify-track-info">
+                  <div className="spotify-track-name">{track.name}</div>
+                  <div className="spotify-track-artist">{track.artist}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 

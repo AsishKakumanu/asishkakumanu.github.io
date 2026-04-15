@@ -194,67 +194,120 @@ span.h3IntroSpan.emoji {
   z-index: 3;
 }
 
-// Spotify Widget
+// Spotify Widget — pill that transforms into embed on hover
 .spotify-widget {
   position: fixed;
-  font-size: 12px;
-  bottom: 5px;
-  right: 0px;
+  bottom: 10px;
+  right: 0;
   z-index: 4;
-  color: var(--spotify-text);
   background-color: var(--spotify-bg);
-  padding: 14px;
-  border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
-  box-shadow: black;
+  border-bottom-left-radius: 25px;
   filter: drop-shadow(-10px 0px 20px var(--spotify-shadow));
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
+  overflow: hidden;
+  width: 44px;
+  max-height: 44px;
   cursor: pointer;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-radius 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 
-  &:visited {
-    color: var(--spotify-text);
-  }
-
-  .spotify-track {
-    display: none;
-  }
-
-  @media (hover: none) and (any-pointer: coarse) {
-    &:hover {
-      @include hoverEffect;
-
-      .spotify-track {
-        display: unset;
-        transition: 2s;
-      }
-    }
-  }
-
-  @media (hover: hover) and (any-pointer: fine) {
-    &:hover {
-      @include hoverEffect;
-
-      .spotify-track {
-        display: unset;
-        transition: 2s;
-      }
-    }
+  &:hover {
+    width: 320px;
+    max-height: 600px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    cursor: default;
   }
 }
 
-// Spotify Icon
-.spotify-icon {
-  display: inline-table;
-  color: #1DB954;
+.spotify-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 10px;
+  white-space: nowrap;
+}
 
-  & > svg {
-    display: block;
-    width: 14px;
-    height: 14px;
-    padding: 0px 5px;
+.spotify-logo {
+  color: #1DB954;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.spotify-header-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--spotify-text);
+  opacity: 0;
+  transition: opacity 0.2s ease 0.1s;
+
+  .spotify-widget:hover & {
+    opacity: 1;
   }
+}
+
+.spotify-content {
+  opacity: 0;
+  transition: opacity 0.2s ease 0.1s;
+
+  .spotify-widget:hover & {
+    opacity: 1;
+  }
+}
+
+.spotify-embed {
+  padding: 0 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.spotify-track-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 4px 0 8px;
+}
+
+.spotify-track-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: var(--spotify-text);
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.spotify-track-art {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.spotify-track-info {
+  min-width: 0;
+}
+
+.spotify-track-name {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-track-artist {
+  font-size: 11px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // Darkmode - backwards compatibility
