@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
-const RECENTLY_PLAYED_ENDPOINT = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
+const RECENTLY_PLAYED_ENDPOINT = "https://api.spotify.com/v1/me/player/recently-played?limit=5";
 
 async function getAccessToken() {
   const client_id = process.env.SPOTIFY_CLIENT_ID;
