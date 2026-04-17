@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useLocation } from 'react-router-dom'
+import Header from '@components/Header'
 import DarkModeToggle from '@components/DarkModeToggle'
 import SpotifyWidget from '@components/SpotifyWidget'
 import '@styles/declare.scss'
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Header />
       <main>{children}</main>
       <footer></footer>
       <DarkModeToggle />

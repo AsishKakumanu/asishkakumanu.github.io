@@ -37,3 +37,7 @@ public/static
 # PWA
 sw.js
 workbox-*.js
+
+# Local verification artifacts
+.playwright-cli/
+output/

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { ReactTyped } from 'react-typed'
 import SEO from '@components/SEO'
 import Anchor from '@components/Anchor'
-import Header from '@components/Header'
 import PageTransition from '@components/PageTransition'
 
 const containerVariants = {
@@ -32,7 +31,6 @@ function Home() {
     <PageTransition>
       <SEO title="Personal Website" />
       <div className="Hero index">
-        <Header />
         <motion.div
           className="SubHero"
           variants={containerVariants}

@@ -22,7 +22,7 @@
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.4.0",
     "react-modal": "^3.16.1",
-    "react-router-dom": "^7.1.1",
+    "react-router-dom": "^7.14.1",
     "react-typed": "^2.0.12",
     "simple-icons": "^14.6.0"
   },
@@ -41,9 +41,7 @@
     "vite-plugin-pwa": "^0.21.1"
   },
   "overrides": {
-    "workbox-build": {
-      "fs-extra": "^11.2.0"
-    }
+    "@rollup/plugin-terser": "^1.0.0"
   },
   "repository": {
     "type": "git",
@@ -51,6 +49,6 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }
