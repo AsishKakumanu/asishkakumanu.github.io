@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '@components/SEO'
-import Header from '@components/Header'
 import AboutMe from '@components/AboutMe'
 import PageTransition from '@components/PageTransition'
 import myPic from '@images/myPortrait2.jpeg'
@@ -99,7 +98,6 @@ function About() {
   return (
     <PageTransition>
       <SEO title="About" />
-      <Header />
       <div className="Hero about">
         <div className="AboutSubHero">
           <div className="container">

@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
-import Header from '@components/Header'
 import ProjectCard from '@components/ProjectCard'
 import PageTransition from '@components/PageTransition'
 import projectData from '@data/projects.json'
@@ -19,7 +18,6 @@ function Projects() {
   return (
     <PageTransition>
       <SEO title="Projects" />
-      <Header />
       <div className="Hero page2">
         <div className="SubHero">
           <motion.h3

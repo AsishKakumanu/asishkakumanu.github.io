@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import SEO from '@components/SEO'
-import Header from '@components/Header'
 import Anchor from '@components/Anchor'
 import PageTransition from '@components/PageTransition'
 
@@ -46,7 +45,6 @@ function Contact() {
   return (
     <PageTransition>
       <SEO title="Contact" />
-      <Header />
       <div className="Hero contactPage">
         <div className="contactSubHero">
           <div className="contactContainer">
