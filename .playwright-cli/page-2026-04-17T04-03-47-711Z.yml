@@ -1,0 +1,64 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - link "headerLogo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "headerLogo" [ref=e8]
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e10] [cursor=pointer]:
+          - /url: /projects
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: /contact
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Links" [level=3] [ref=e17]
+          - paragraph [ref=e18]:
+            - text: Here are all the ways you can connect to me or follow my work. I'm mostly active in Linkedin
+            - img ":suitcase:" [ref=e19]: 💼
+            - text: "& Instagram"
+            - img ":camera:" [ref=e20]: 📸
+            - text: .
+          - generic [ref=e21]:
+            - link "insta @asishkakumanu" [ref=e23] [cursor=pointer]:
+              - /url: https://www.instagram.com/asishkakumanu/
+              - img "insta" [ref=e25]
+              - paragraph [ref=e26]: "@asishkakumanu"
+            - link "linkedin @asishkakumanu" [ref=e28] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/asishkakumanu/
+              - img "linkedin" [ref=e30]
+              - paragraph [ref=e31]: "@asishkakumanu"
+            - link "github @AsishKakumanu" [ref=e33] [cursor=pointer]:
+              - /url: https://github.com/AsishKakumanu
+              - img "github" [ref=e35]
+              - paragraph [ref=e36]: "@AsishKakumanu"
+          - paragraph [ref=e37]: Wanna have a quick chat?
+          - link "telegram" [ref=e39] [cursor=pointer]:
+            - /url: https://t.me/AsishKakumanu
+            - img "telegram" [ref=e41]
+        - generic [ref=e42]:
+          - heading "Let's Discuss! :nerd:" [level=3] [ref=e43]:
+            - text: Let's Discuss!
+            - img ":nerd:" [ref=e44]: 🤓
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - generic [ref=e48]: Name
+                - textbox "Enter your name" [ref=e49]
+              - generic [ref=e50]:
+                - generic [ref=e51]: Email
+                - textbox "Enter your email" [ref=e52]
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - generic [ref=e55]: Subject
+                - textbox "Enter Subject" [ref=e56]
+              - generic [ref=e57]:
+                - generic [ref=e58]: Message
+                - textbox [ref=e59]
+              - button "Send" [ref=e60] [cursor=pointer]
+  - contentinfo
+  - button "Switch to dark mode" [ref=e61] [cursor=pointer]:
+    - generic [ref=e62]: 🌙

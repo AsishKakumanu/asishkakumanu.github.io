@@ -1,0 +1,19 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - link "headerLogo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "headerLogo" [ref=e8]
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e10] [cursor=pointer]:
+          - /url: /projects
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: /contact
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+      - img "404 Error" [ref=e14]
+  - contentinfo
+  - button "Switch to dark mode" [ref=e15] [cursor=pointer]:
+    - generic [ref=e16]: 🌙

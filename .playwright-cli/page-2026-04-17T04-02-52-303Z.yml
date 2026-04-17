@@ -1,0 +1,34 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - link "headerLogo" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "headerLogo" [ref=e9]
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e11] [cursor=pointer]:
+          - /url: /projects
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+        - link "About" [ref=e13] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e14]:
+        - heading "Hey :wave:! My name is Asish Kakumanu" [level=3] [ref=e15]:
+          - text: Hey
+          - img ":wave:" [ref=e16]: 👋🏻
+          - text: "! My name is Asish Kakumanu"
+        - paragraph [ref=e17]:
+          - text: I'm a 32 year old
+          - text: Developer based in Sunnyvale, California.
+        - paragraph [ref=e18]: By day, I'm an SDE at Amazon, by night I work on personal projects.
+        - link "link Contact Me" [ref=e20] [cursor=pointer]:
+          - /url: /contact
+          - img "link" [ref=e22]
+          - paragraph [ref=e23]: Contact Me
+  - contentinfo
+  - button "Switch to dark mode" [ref=e25] [cursor=pointer]:
+    - generic [ref=e26]: 🌙
+  - link [ref=e27] [cursor=pointer]:
+    - /url: https://open.spotify.com
+    - img [ref=e29]

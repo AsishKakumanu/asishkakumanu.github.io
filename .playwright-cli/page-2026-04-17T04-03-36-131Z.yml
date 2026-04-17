@@ -1,0 +1,81 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - link "headerLogo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "headerLogo" [ref=e8]
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e10] [cursor=pointer]:
+          - /url: /projects
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: /contact
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e14]:
+        - heading "Projects" [level=3] [ref=e15]
+        - generic [ref=e16]:
+          - link "My Portolio Website React JS" [ref=e17] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/asishkakumanu.github.io
+            - generic [ref=e18]:
+              - generic [ref=e19]: My Portolio Website
+              - generic [ref=e21]: React JS
+          - link "GradCafe Telegram Bot Python, Telebot API" [ref=e22] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/GradCafe-Crawler
+            - generic [ref=e23]:
+              - generic [ref=e24]: GradCafe Telegram Bot
+              - generic [ref=e26]: Python, Telebot API
+          - link "Simple DynamoDB Java, Android" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE586-DistributedSystems/tree/master/PA4-SimpleDynamo
+            - generic [ref=e28]:
+              - generic [ref=e29]: Simple DynamoDB
+              - generic [ref=e31]: Java, Android
+          - link "Group Messenger Java, Android" [ref=e32] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE586-DistributedSystems/tree/master/PA2/B
+            - generic [ref=e33]:
+              - generic [ref=e34]: Group Messenger
+              - generic [ref=e36]: Java, Android
+          - link "Grid Localization using Bayes Filter Python, ROS" [ref=e37] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE568-Robotic-Algorithms/tree/master/lab4
+            - generic [ref=e38]:
+              - generic [ref=e39]: Grid Localization using Bayes Filter
+              - generic [ref=e41]: Python, ROS
+          - link "Handwriting Recognition using Machine Learing Python" [ref=e42] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE574-Machine-Learning/tree/master/P2
+            - generic [ref=e43]:
+              - generic [ref=e44]: Handwriting Recognition using Machine Learing
+              - generic [ref=e46]: Python
+          - link "Digit Classification Python" [ref=e47] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE574-Machine-Learning/tree/master/P3
+            - generic [ref=e48]:
+              - generic [ref=e49]: Digit Classification
+              - generic [ref=e51]: Python
+          - link "Document Search Engine Java" [ref=e52] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE535-Information-Retrieval/tree/master/P2
+            - generic [ref=e53]:
+              - generic [ref=e54]: Document Search Engine
+              - generic [ref=e56]: Java
+          - link "Laser Based Perception and Navigation with Obstacle Avoidance Python, ROS" [ref=e57] [cursor=pointer]:
+            - /url: https://github.com/AsishKakumanu/CSE568-Robotic-Algorithms/tree/master/lab2
+            - generic [ref=e58]:
+              - generic [ref=e59]: Laser Based Perception and Navigation with Obstacle Avoidance
+              - generic [ref=e61]: Python, ROS
+          - link "OTP Detection Java, Android" [ref=e62] [cursor=pointer]:
+            - /url: https://drive.google.com/open?id=1TH8WslOs2D4DmT0eesIKEdDbsz0U5h72
+            - generic [ref=e63]:
+              - generic [ref=e64]: OTP Detection
+              - generic [ref=e66]: Java, Android
+          - link "Custom AOSP ROM C, DSIXDA Kitchen" [ref=e67] [cursor=pointer]:
+            - /url: ""
+            - generic [ref=e68]:
+              - generic [ref=e69]: Custom AOSP ROM
+              - generic [ref=e71]: C, DSIXDA Kitchen
+          - link "WLAN Chat Java, HTML, CSS, JQuery" [ref=e72] [cursor=pointer]:
+            - /url: ""
+            - generic [ref=e73]:
+              - generic [ref=e74]: WLAN Chat
+              - generic [ref=e76]: Java, HTML, CSS, JQuery
+  - contentinfo
+  - button "Switch to dark mode" [ref=e77] [cursor=pointer]:
+    - generic [ref=e78]: 🌙
